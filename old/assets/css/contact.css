@@ -1,0 +1,119 @@
+#adresses {
+  background-color: #f8f8f8;
+  padding: 80px 20px;
+  font-family: inherit;
+}
+
+#adresses h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 60px;
+}
+
+.location-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 60px 40px; 
+  max-width: 1400px; 
+  margin: 0 auto;
+  flex-wrap: wrap; 
+}
+
+.location-card {
+  position: relative;
+  width: 260px; 
+  height: 280px;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-card:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -22px;
+  top: 15%;
+  height: 70%;
+  width: 4px;
+  background-color: #a7d8d7;
+  z-index: 1;
+}
+
+.card-content {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95); 
+  padding: 20px;
+  box-sizing: border-box;
+  color: #333;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-content h5 { font-size: 16px; font-weight: 700; text-transform: uppercase; margin-top: 0; margin-bottom: 20px; }
+.card-content p { font-size: 14px; line-height: 1.7; margin-bottom: 12px; }
+.card-content .contact-info { margin: 0; }
+.card-content i { margin-right: 8px; width: 15px; text-align: center; }
+
+.card-bg-clinica { background-image: url('../images/locations/eurooptik_clinica.png'); }
+.card-bg-razboieni { background-image: url('../images/locations/eurooptik_razboieni.png'); }
+.card-bg-moinesti { background-image: url('../images/locations/eurooptik_moinesti.png'); }
+.card-bg-comanesti { background-image: url('../images/locations/eurooptik_comanesti.png'); }
+.card-bg-onesti { background-image: url('../images/locations/eurooptik_onesti.png'); }
+
+@media (min-width:1550px) {
+  .location-cards-container {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 1400px) { .location-card:nth-of-type(4n)::after { display: none; } }
+@media (max-width: 1100px) { .location-card:nth-of-type(3n)::after { display: none; } }
+@media (max-width: 850px) { .location-card:nth-of-type(2n)::after { display: none; } }
+
+.carousel-nav { display: none; }
+
+@media (max-width: 767px) {
+  #adresses { padding: 60px 0; }
+  .location-card::after { display: none !important; }
+  
+  .carousel-viewport { max-width: 320px; margin: 0 auto; overflow: hidden; }
+
+  .location-cards-container {
+    flex-wrap: nowrap; 
+    gap: 0;
+    transition: transform 0.5s ease-in-out;
+    justify-content: flex-start; 
+  }
+  
+  .location-card {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .carousel-nav { display: flex; justify-content: center; gap: 20px; margin-top: 30px; }
+  
+  .carousel-btn { background-color: #a7d8d7; color: white; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background-color 0.3s ease; }
+  
+  .carousel-btn:hover { background-color: #8dbfb9; }
+}
+
+a.location-card { text-decoration: none; color: inherit; display: flex; }
+.card-content { transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; }
+.location-address { position: relative; transition: transform 0.3s ease-in-out; }
+.location-address::after { content: '\f3c5'; font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands"; font-weight: 900; position: absolute; top: 50%; right: -5px; transform: translateY(-50%) scale(0); color: #a7d8d7; font-size: 1.2em; opacity: 0; transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; }
+a.location-card:hover .card-content { transform: scale(1.03); box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); }
+a.location-card:hover .location-address::after { transform: translateY(-50%) scale(1); opacity: 1; }

@@ -1,0 +1,56 @@
+/* Import all necessary styles */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+@import url('https://fonts.googleapis.com/css?family=Volkhov:400i');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+/* Custom styles */
+:root {
+  --primary-color: #00B77E;
+  --secondary-color: #333;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+.navbar-custom {
+  background: transparent;
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+}
+
+.navbar-custom.is-fixed {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Logo positioning */
+.navbar-brand img {
+  max-height: 90px;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand-center {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .navbar-brand-center {
+    display: block;
+    text-align: center;
+  }
+  
+  .navbar-brand.hidden-xs {
+    display: none;
+  }
+  
+  .navbar-brand-center img {
+    margin-top: -30px;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}

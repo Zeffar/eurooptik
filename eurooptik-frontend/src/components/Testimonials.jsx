@@ -1,4 +1,5 @@
 import React from 'react';
+import TestimonialsSlider from './TestimonialsSlider';
 
 const Testimonials = () => {
   return (
@@ -10,7 +11,9 @@ const Testimonials = () => {
           </div>
         </div>
         <div className="row">
-            {/* Testimonial content will go here */}
+          <div className="col-sm-12">
+            <TestimonialsSlider />
+          </div>
         </div>
       </div>
     </section>

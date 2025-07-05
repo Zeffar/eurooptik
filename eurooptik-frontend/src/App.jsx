@@ -1,4 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'animate.css/animate.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+// Import custom styles
+import './styles/global.css';
+import './styles/header.css';
+import './index.css';
 
 import Preloader from './components/Preloader';
 import Header from './components/Header';
@@ -13,70 +21,77 @@ import AppointmentModal from './components/AppointmentModal';
 import Footer from './components/Footer';
 import ScrollUp from './components/ScrollUp';
 
-import './index.css';
-
 function App() {
-  // State to control the visibility of the programare modal
   const [isProgramareVisible, setProgramareVisible] = useState(false);
-
   const [isLoading, setIsLoading] = useState(true);
-  const [isFading, setIsFading] = useState(false); // For the fade-out animation
-
-  // Functions to show/hide the modal
-  const showProgramare = () => {
-    setProgramareVisible(true);
-    // Optional: scroll to the section after it's rendered
-    setTimeout(() => {
-        document.getElementById('programare-section')?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-  };
-  const hideProgramare = () => setProgramareVisible(false);
+  const [isFading, setIsFading] = useState(false);
+  const [activeLocation, setActiveLocation] = useState('Moinesti');
+  const [isHeroVisible, setIsHeroVisible] = useState(true);
 
   useEffect(() => {
-    // This function will run only once after the component mounts
-    
-    // Start the fade-out animation after a delay (e.g., 1.5 seconds)
-    const fadeTimer = setTimeout(() => {
+    // Simulate loading time
+    setTimeout(() => {
       setIsFading(true);
-    }, 1500);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 300);
+    }, 1000);
 
-    // Completely remove the preloader from the DOM after the fade-out animation is complete
-    const loadTimer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2000); // This should be 1500ms delay + 500ms animation time
+    // Set up intersection observer for hero section
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsHeroVisible(entry.isIntersecting);
+      },
+      {
+        threshold: 0.3
+      }
+    );
 
-    // Cleanup function to clear timers if the component unmounts
+    const heroSection = document.querySelector('#hero-section');
+    if (heroSection) {
+      observer.observe(heroSection);
+    }
+
     return () => {
-      clearTimeout(fadeTimer);
-      clearTimeout(loadTimer);
+      if (heroSection) {
+        observer.unobserve(heroSection);
+      }
     };
-  }, []); // The empty array `[]` ensures this effect runs only once.
+  }, []);
+
+  const showProgramare = () => {
+    setProgramareVisible(true);
+    setTimeout(() => {
+      document.getElementById('programare-section')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
+  const hideProgramare = () => {
+    setProgramareVisible(false);
+  };
+
+  if (isLoading) {
+    return <Preloader isFading={isFading} />;
+  }
 
   return (
-    <>
-      {isLoading ? (
-        <Preloader isFading={isFading} />
-      ) : (
-        <>
-          <Header onShowProgramare={showProgramare} />
-          <main>
-            <Hero onShowProgramare={showProgramare} />
-            <div className="main">
-              <Services />
-              <Team />
-              <Pricing />
-              <AllServices />
-              <Testimonials />
-              <Contact />
-              <AppointmentModal show={isProgramareVisible} onClose={hideProgramare} />
-              <hr className="divider-d" />
-              <Footer />
-            </div>
-          </main>
-          <ScrollUp />
-        </>
-      )}
-    </>
+    <div className="main-wrapper">
+      <Header onShowProgramare={showProgramare} isTransparent={isHeroVisible} />
+      <main>
+        <Hero />
+        <Services />
+        <Team />
+        <Pricing />
+        <AllServices />
+        <Testimonials />
+        <Contact />
+        {isProgramareVisible && (
+          <AppointmentModal onClose={hideProgramare} />
+        )}
+        <Footer activeLocation={activeLocation} onLocationChange={setActiveLocation} />
+        <ScrollUp />
+      </main>
+    </div>
   );
 }
 

@@ -1,13 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 // Import all team member images
 import alinaPopa from '../assets/images/Angajati/Alina_Popa.png';
 import anaMiller from '../assets/images/Angajati/Ana_Miller.png';
-// ... import all 8 images
+import ancaCraciun from '../assets/images/Angajati/Anca_Craciun.png';
+// ... import all other images as needed
+
+const teamMembers = [
+  {
+    name: 'Dr. Alina Popa',
+    role: 'Medic primar oftalmolog',
+    specialty: 'Specializare în oftalmologie pediatrică',
+    image: alinaPopa,
+    category: 'locatia-a',
+  },
+  {
+    name: 'Dr. Ana Miller',
+    role: 'Medic specialist oftalmolog',
+    specialty: 'Specialist în chirurgie refractivă',
+    image: anaMiller,
+    category: 'locatia-b',
+  },
+  {
+    name: 'Dr. Anca Crăciun',
+    role: 'Medic specialist oftalmolog',
+    specialty: 'Experiență în glaucom și boli retiniene',
+    image: ancaCraciun,
+    category: 'locatia-c',
+  },
+  // ... add all other doctors
+];
+
+const filters = [
+  { label: 'Toți medicii', value: 'all' },
+  { label: 'Bacău Cabinet', value: 'locatia-a' },
+  { label: 'Bacău Clinică', value: 'locatia-b' },
+  { label: 'Comănești', value: 'locatia-c' },
+  { label: 'Onești', value: 'locatia-d' },
+  { label: 'Moinești', value: 'locatia-e' },
+];
 
 const Team = () => {
-  // NOTE: The filtering logic will be handled in React using a state variable, e.g.,
-  // const [filter, setFilter] = useState('all');
-  // You would then filter an array of doctor data before mapping over it to render the members.
+  const [filter, setFilter] = useState('all');
+  const filteredMembers = filter === 'all' ? teamMembers : teamMembers.filter(m => m.category === filter);
+
   return (
     <section className="module" id="echipa-noastra">
       <div className="team-section-decor"></div>
@@ -20,33 +55,40 @@ const Team = () => {
         <div className="row">
           <div className="col-sm-12 text-center mb-40">
             <div className="location-buttons-container">
-              <button type="button" className="btn btn-round team-filter-btn" data-filter="all">Toți medicii</button>
-              <button type="button" className="btn btn-round team-filter-btn" data-filter="locatia-a">Bacău Cabinet</button>
-              {/* ... other filter buttons ... */}
+              {filters.map(f => (
+                <button
+                  key={f.value}
+                  type="button"
+                  className={`btn btn-round team-filter-btn${filter === f.value ? ' btn-d' : ' btn-border-d'}`}
+                  onClick={() => setFilter(f.value)}
+                >
+                  {f.label}
+                </button>
+              ))}
             </div>
           </div>
         </div>
         <div className="row multi-columns-row">
-          {/* Doctor 1 */}
-          <div className="col-sm-6 col-md-3 col-lg-3 mb-sm-20 team-member" data-category="locatia-a">
-            <div className="team-item">
-              <div className="team-image">
-                <img src={alinaPopa} alt="Alina Popa" style={{ width: '100%', height: '300px', objectFit: 'cover' }} />
-                <div className="team-detail">
-                  <p className="font-serif">Specializare în oftalmologie pediatrică</p>
-                  <div className="team-social">
-                    <a href="#"><i className="fa fa-phone"></i></a>
-                    <a href="#"><i className="fa fa-envelope"></i></a>
+          {filteredMembers.map((member, idx) => (
+            <div className="col-sm-6 col-md-3 col-lg-3 mb-sm-20 team-member" key={idx} data-category={member.category}>
+              <div className="team-item">
+                <div className="team-image">
+                  <img src={member.image} alt={member.name} style={{ width: '100%', height: '300px', objectFit: 'cover' }} />
+                  <div className="team-detail">
+                    <p className="font-serif">{member.specialty}</p>
+                    <div className="team-social">
+                      <a href="#"><i className="fa fa-phone"></i></a>
+                      <a href="#"><i className="fa fa-envelope"></i></a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="team-descr">
-                <div className="team-name">Dr. Alina Popa</div>
-                <div className="team-role">Medic primar oftalmolog</div>
+                <div className="team-descr">
+                  <div className="team-name">{member.name}</div>
+                  <div className="team-role">{member.role}</div>
+                </div>
               </div>
             </div>
-          </div>
-          {/* ... Repeat for all 8 doctors, using the imported image variables ... */}
+          ))}
         </div>
       </div>
     </section>

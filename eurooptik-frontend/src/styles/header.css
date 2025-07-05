@@ -1,0 +1,100 @@
+/* Header styles */
+.navbar-custom {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navbar-custom.is-fixed {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.navbar-custom .navbar-nav > li > a {
+  color: #333;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 20px 15px;
+}
+
+.navbar-custom .navbar-nav > li.active > a,
+.navbar-custom .navbar-nav > li > a:hover {
+  color: var(--primary-color);
+}
+
+.navbar-custom.navbar-transparent {
+  background: transparent;
+}
+
+.navbar-custom.navbar-transparent .navbar-nav > li > a {
+  color: #fff;
+}
+
+.navbar-custom.navbar-transparent.is-fixed .navbar-nav > li > a {
+  color: #333;
+}
+
+#navbar-button-programare {
+  background-color: var(--primary-color);
+  color: white !important;
+  border-radius: 4px;
+  padding: 10px 20px !important;
+  margin: 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+#navbar-button-programare:hover {
+  background-color: #009b69;
+}
+
+/* Mobile menu styles */
+@media (max-width: 767px) {
+  .navbar-custom .navbar-collapse {
+    background: white;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .navbar-custom .navbar-nav > li > a {
+    color: #333 !important;
+    padding: 10px 15px;
+  }
+
+  .navbar-custom .navbar-toggle {
+    border-color: #333;
+    margin-top: 15px;
+  }
+
+  .navbar-custom .navbar-toggle .icon-bar {
+    background-color: #333;
+  }
+
+  .navbar-custom.navbar-transparent .navbar-toggle {
+    border-color: #fff;
+  }
+
+  .navbar-custom.navbar-transparent .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+
+  .navbar-custom.is-fixed .navbar-toggle,
+  .navbar-custom.navbar-transparent.is-fixed .navbar-toggle {
+    border-color: #333;
+  }
+
+  .navbar-custom.is-fixed .navbar-toggle .icon-bar,
+  .navbar-custom.navbar-transparent.is-fixed .navbar-toggle .icon-bar {
+    background-color: #333;
+  }
+}
