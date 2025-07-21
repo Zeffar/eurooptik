@@ -16,7 +16,6 @@ const testimonials = [
     name: 'Elena Georgescu',
     text: 'O experiență foarte plăcută, totul a decurs perfect.',
   },
-  // ...add more testimonials as needed
 ];
 
 const TestimonialsSlider = () => {

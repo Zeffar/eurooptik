@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css/animate.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-// Import custom styles
 import './styles/global.css';
 import './styles/header.css';
 import './index.css';
@@ -29,7 +28,6 @@ function App() {
   const [isHeroVisible, setIsHeroVisible] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time
     setTimeout(() => {
       setIsFading(true);
       setTimeout(() => {
@@ -37,7 +35,6 @@ function App() {
       }, 300);
     }, 1000);
 
-    // Set up intersection observer for hero section
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsHeroVisible(entry.isIntersecting);

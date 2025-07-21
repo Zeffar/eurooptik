@@ -27,14 +27,12 @@ const Services = () => {
           <h3 className="module-title" style={{ fontSize: '30px' }}>Clinica Chirurgicală</h3>
           <hr style={hrStyle} />
           <div className="row">
-            {/* Service Item */}
             <div className="col-sm-4 col-xs-12">
               <div className="features-item">
                 <div className="features-icon" id="features-img"><img src={serviceIcon} alt="Service Icon" /></div>
                 <h3 className="features-title" style={{ fontSize: '20px' }}>Operații de Cataractă</h3>
               </div>
             </div>
-            {/* Repeat for other services */}
             <div className="col-sm-4 col-xs-12">
               <div className="features-item">
                 <div className="features-icon" id="features-img"><img src={serviceIcon} alt="Service Icon" /></div>
@@ -56,14 +54,12 @@ const Services = () => {
           <h3 className="module-title" style={{ fontSize: '30px' }}>Oftalmologie Copii</h3>
           <hr style={hrStyle} />
           <div className="row">
-            {/* Service Item */}
             <div className="col-sm-4 col-xs-12">
               <div className="features-item">
                 <div className="features-icon" id="features-img"><img src={serviceIcon} alt="Service Icon" /></div>
                 <h3 className="features-title" style={{ fontSize: '20px' }}>Stellest</h3>
               </div>
             </div>
-            {/* Repeat for other services */}
             <div className="col-sm-4 col-xs-12">
               <div className="features-item">
                 <div className="features-icon" id="features-img"><img src={serviceIcon} alt="Service Icon" /></div>

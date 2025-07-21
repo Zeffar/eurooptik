@@ -15,7 +15,7 @@ const Header = ({ onShowProgramare }) => {
     e.preventDefault();
     const target = document.querySelector(targetId);
     if (target) {
-      const targetPosition = target.offsetTop - 70; // Adjust for navbar height
+      const targetPosition = target.offsetTop - 70; 
       window.scrollTo({
         top: targetPosition,
         behavior: 'smooth'

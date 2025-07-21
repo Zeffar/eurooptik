@@ -2,9 +2,6 @@ import React from 'react';
 import logoSmall from '../assets/images/logo-small.png';
 
 const Footer = () => {
-  // NOTE: The "Programeaza-te online" button will need an onClick handler
-  // to show the programare modal, just like the one in the Header.
-  // We can pass the `onShowProgramare` function down to it later.
   return (
     <footer className="footer">
       <section className="footer-message">
@@ -31,7 +28,6 @@ const Footer = () => {
         </div>
         <div className="footer-center">
           <nav className="footer-menu">
-            {/* Navigation links are now filled in */}
             <a href="#totop">Acasa</a>
             <a href="#services">Serviciile Noastre</a>
             <a href="#echipa-noastra">Echipa Noastra</a>

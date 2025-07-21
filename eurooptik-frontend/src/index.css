@@ -1,9 +1,6 @@
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Merriweather:ital@0;1&display=swap');
 
-/*--------------------------------------------------------------
-	Common
---------------------------------------------------------------*/
 html {
   overflow-y: scroll;
   overflow-x: hidden;
@@ -12,7 +9,6 @@ html {
 
 body {
   background: #f2f0ed;
-  /* Changed from #f5f5f5 to a warmer, slightly darker tone */
   font: 400 12px/1.8 "Roboto", sans-serif;
   color: #666;
   -webkit-font-smoothing: antialiased;
@@ -44,7 +40,6 @@ iframe {
   left: auto !important;
 }
 
-/* Transition elsements */
 a,
 .btn {
   transition: all 0.125s ease-in-out 0s;
@@ -66,7 +61,6 @@ a,
   transition: all 0.3s ease-in-out 0s;
 }
 
-/* Reset box-shadow */
 .btn,
 .well,
 .panel,
@@ -78,7 +72,6 @@ a,
   box-shadow: none;
 }
 
-/* Reset border-radius */
 .well,
 .label,
 .alert,
@@ -153,7 +146,6 @@ a,
   margin: 0;
 }
 
-/* Sections */
 .navbar-custom+.main {
   margin-top: 50px;
 }
@@ -176,7 +168,6 @@ a,
   width: 100%;
 }
 
-/* Module header */
 .module-small {
   padding: 20px 0;
 }
@@ -207,7 +198,6 @@ a,
   width: 100%;
 }
 
-/* Sections dividers */
 .divider-w {
   border-top: 1px solid #eaeaea;
   margin: 0;
@@ -218,7 +208,6 @@ a,
   margin: 0;
 }
 
-/* Half-image */
 .side-image {
   position: absolute;
   height: 100%;
@@ -234,7 +223,6 @@ a,
   padding: 140px 60px 140px;
 }
 
-/* Dark background */
 .bg-dark,
 .bg-dark-30,
 .bg-dark-60,

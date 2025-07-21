@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-// Import all team member images
 import alinaPopa from '../assets/images/Angajati/Alina_Popa.png';
 import anaMiller from '../assets/images/Angajati/Ana_Miller.png';
 import ancaCraciun from '../assets/images/Angajati/Anca_Craciun.png';
-// ... import all other images as needed
 
 const teamMembers = [
   {
@@ -27,7 +25,6 @@ const teamMembers = [
     image: ancaCraciun,
     category: 'locatia-c',
   },
-  // ... add all other doctors
 ];
 
 const filters = [
