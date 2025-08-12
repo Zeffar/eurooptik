@@ -5,16 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--  
-    Document Title
-    =============================================
-    -->
   <title>Eurooptik</title>
-  <!--  
-    Favicons
-    =============================================
-    -->
-
   <!--  
     Stylesheets
     =============================================
@@ -22,7 +13,8 @@
     -->
   <!-- Default stylesheets-->
   <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
+
   <!-- Template specific stylesheets-->
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
@@ -30,6 +22,7 @@
   <link href="assets/lib/animate.css/animate.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link href="assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
   <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
   <link href="assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
@@ -42,12 +35,16 @@
   <link href="assets/css/team-responsive.css" rel="stylesheet">
   <link href="assets/css/team-enhancements.css" rel="stylesheet">
   <link href="assets/css/footer.css" rel="stylesheet">
-
-  <!-- Icons CDN -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+  <link href="assets/css/contact.css" rel="stylesheet">
+  <link href="assets/css/prices.css" rel="stylesheet">
+  <link href="assets/css/testimonials.css" rel="stylesheet">
+  <link href="assets/css/services.css" rel="stylesheet">
+  <link href="assets/css/new-specializations.css" rel="stylesheet">
+  <link href="assets/css/location.css" rel="stylesheet"> 
+  <link href="assets/css/sponsors.css" rel="stylesheet">
+  <link href="assets/css/custom-fonts.css" rel="stylesheet">
+  <!-- CONTENTFUL SDK -->
+  <script src="https://unpkg.com/contentful@latest/dist/contentful.browser.min.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
@@ -115,8 +112,7 @@
 
           <a class="section-scroll btn btn-border-w btn-round" class="btn-programare" id="home-appointment-button"
             href="#" onclick="showProgramareSection(); return false;">Programează-te</a>
-          <a class="section-scroll btn btn-border-w btn-round" href="#services" id="home-cine-suntem-button">Cine
-            Suntem</a>
+          <a class="section-scroll btn btn-border-w btn-round" href="#new-specializations" id="home-cine-suntem-button"> Specialitățile Noastre  </a>
 
         </div>
       </div>
@@ -124,292 +120,118 @@
 
     <div class="main">
 
-      <section class="module" id="services">
-        <div class="row">
-          <div class="col-sm-6 col-sm-offset-3">
-            <h3 class="module-title">SERVICIILE NOASTRE</h3>
-          </div>
-        </div>
-
-        <div class="container" style="padding-top: 16px;">
-          <h3 class="module-title" style="font-size:30px;">Clinica
-            Chirurgicală</h3>
-          <hr
-            style="width:100vw;height:2px;background: #b4b1b4;border:none;margin:-30px 0 15px;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;">
-          <div class="row">
-            <div class="col-sm-4 col-xs-12">
-              <div class="features-item">
-                <div class="features-icon" id="features-img">
-                  <img src="assets/images/green copy.png">
-                </div>
-                <h3 class="features-title" style="font-size:20px;">Operații de
-                  Cataractă</h3>
-              </div>
-            </div>
-            <div class="col-sm-4 col-xs-12">
-              <div class="features-item">
-                <div class="features-icon" id="features-img">
-                  <img src="assets/images/green copy.png">
-                </div>
-                <h3 class="features-title" style="font-size:20px;">Operații de
-                  Glaucom</h3>
-              </div>
-            </div>
-            <div class="col-sm-4 col-xs-12">
-              <div class="features-item">
-                <div class="features-icon" id="features-img">
-                  <img src="assets/images/green copy.png">
-                </div>
-                <h3 class="features-title" style="font-size:20px;">Operații
-                  Laser</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="module" id="oftalmologie-copii">
+      <!-- NEW SPECIALIZATIONS SECTION -->
+      <section class="module" id="new-specializations">
         <div class="container">
-          <h3 class="module-title" style="font-size:30px;">Oftalmologie
-            Copii</h3>
-          <hr
-            style="width:100vw;height:2px;background:#b4b1b4;border:none;margin:-30px 0 15px;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;">
-          <div class="row">
-            <div class="col-sm-4 col-xs-12">
-              <div class="features-item">
-                <div class="features-icon" id="features-img">
-                  <img src="assets/images/green copy.png">
-                </div>
-                <h3 class="features-title" style="font-size:20px;">Stellest</h3>
-              </div>
-            </div>
-            <div class="col-sm-4 col-xs-12">
-              <div class="features-item">
-                <div class="features-icon" id="features-img">
-                  <img src="assets/images/green copy.png">
-                </div>
-                <h3 class="features-title" style="font-size:20px;">PlusoptiX</h3>
-              </div>
-            </div>
-            <div class="col-sm-4 col-xs-12">
-              <div class="features-item">
-                <div class="features-icon" id="features-img">
-                  <img src="assets/images/green copy.png">
-                </div>
-                <h3 class="features-title" style="font-size:20px;">Ortokeratologie</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ECHIPA NOASTRA Section -->
-      <section class="module" id="echipa-noastra">
-        <div class="team-section-decor"></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-sm-offset-3 text-center">
-              <h3 class="module-title" style="font-size:30px;">ECHIPA
-                NOASTRĂ</h3>
+          <div class="row text-center mb-40">
+            <div class="col-sm-6 col-sm-offset-3">
+              <h3 class="module-title">SPECIALITĂȚILE NOASTRE</h3>
             </div>
           </div>
 
-          <!-- Team Filter Buttons -->
+          <!-- Main Category Buttons -->
           <div class="row">
             <div class="col-sm-12 text-center mb-40">
-              <div class="location-buttons-container">
-                <button type="button" class="btn btn-round team-filter-btn" data-filter="all">Toți
-                  medicii</button>
-                <button type="button" class="btn btn-round team-filter-btn" data-filter="locatia-a">Bacău
-                  Cabinet</button>
-                <button type="button" class="btn btn-round team-filter-btn" data-filter="locatia-b">Bacău
-                  Clinică</button>
-                <button type="button" class="btn btn-round team-filter-btn" data-filter="locatia-c">Comănești</button>
-                <button type="button" class="btn btn-round team-filter-btn" data-filter="locatia-d">Onești</button>
-                <button type="button" class="btn btn-round team-filter-btn" data-filter="locatia-e">Moinești</button>
+              <div class="specialization-category-buttons">
+                <button class="btn btn-round category-btn active" data-category="surgical">Clinica Chirurgicală</button>
+                <button class="btn btn-round category-btn" data-category="pediatric">Oftalmologie Copii</button>
               </div>
             </div>
           </div>
 
-          <!-- Team Members Grid -->
-          <div class="row multi-columns-row">
-            <!-- Doctor 1 -->
-            <div class="col-sm-6 col-md-3 col-lg-3 mb-sm-20 team-member" data-category="locatia-a">
-              <div class="team-item">
-                <div class="team-image">
-                  <img src="assets/images/Angajati/Alina_Popa.png" alt="Alina Popa"
-                    style="width:100%; height:300px; object-fit:cover;">
-                  <div class="team-detail">
-                    <p class="font-serif">Specializare în oftalmologie
-                      pediatrică</p>
-                    <div class="team-social">
-                      <a href="#"><i class="fa fa-phone"></i></a>
-                      <a href="#"><i class="fa fa-envelope"></i></a>
-                    </div>
-                  </div>
+          <!-- Carousel of Specialization Cards -->
+          <div class="specialization-carousel-wrapper">
+            <div class="specialization-carousel-container">
+              <!-- Card 1: Cataracta (Surgical) -->
+              <div class="specialization-card" data-specialization="cataracta" data-category="surgical">
+                <div class="card-image-container">
+                  <img src="assets/images/specializations/cataracta.jpg" alt="Cataracta">
                 </div>
-                <div class="team-descr">
-                  <div class="team-name">Dr. Alina Popa</div>
-                  <div class="team-role">Medic primar oftalmolog</div>
+                <h4 class="card-title">Cataracta</h4>
+              </div>
+              <!-- Card 2: Glaucom (Surgical) -->
+              <div class="specialization-card" data-specialization="glaucom" data-category="surgical">
+                <div class="card-image-container">
+                  <img src="assets/images/specializations/glaucom.jpg" alt="Glaucom">
                 </div>
+                <h4 class="card-title">Glaucom</h4>
+              </div>
+              <!-- Card 3: Laser (Surgical) -->
+              <div class="specialization-card" data-specialization="laser" data-category="surgical">
+                <div class="card-image-container">
+                  <img src="assets/images/specializations/laser.jpg" alt="Laser">
+                </div>
+                <h4 class="card-title">Operații Laser</h4>
+              </div>
+              <!-- Card 4: Stellest (Pediatric) -->
+              <div class="specialization-card" data-specialization="stellest" data-category="pediatric">
+                <div class="card-image-container">
+                  <img src="assets/images/specializations/stellest.jpg" alt="Stellest">
+                </div>
+                <h4 class="card-title">Lentile Stellest</h4>
+              </div>
+              <!-- Card 5: PlusoptiX (Pediatric) -->
+              <div class="specialization-card" data-specialization="plusoptix" data-category="pediatric">
+                <div class="card-image-container">
+                  <img src="assets/images/specializations/plusoptix.jpg" alt="PlusoptiX">
+                </div>
+                <h4 class="card-title">PlusoptiX</h4>
+              </div>
+              <!-- Card 6: Ortokeratologie (Pediatric) -->
+              <div class="specialization-card" data-specialization="ortokeratologie" data-category="pediatric">
+                <div class="card-image-container">
+                  <img src="assets/images/specializations/ortokeratologie.jpg" alt="Ortokeratologie">
+                </div>
+                <h4 class="card-title">Ortokeratologie</h4>
               </div>
             </div>
+            <button class="carousel-nav-btn prev-card"><i class="fa fa-chevron-left"></i></button>
+            <button class="carousel-nav-btn next-card"><i class="fa fa-chevron-right"></i></button>
+          </div>
 
-            <!-- Doctor 2 -->
-            <div class="col-sm-6 col-md-3 col-lg-3 mb-sm-20 team-member" data-category="locatia-b">
-              <div class="team-item">
-                <div class="team-image">
-                  <img src="assets/images/Angajati/Ana_Miller.png" alt="Ana Miller"
-                    style="width:100%; height:300px; object-fit:cover;">
-                  <div class="team-detail">
-                    <p class="font-serif">Specialist în chirurgie
-                      refractivă</p>
-                    <div class="team-social">
-                      <a href="#"><i class="fa fa-phone"></i></a>
-                      <a href="#"><i class="fa fa-envelope"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="team-descr">
-                  <div class="team-name">Dr. Ana Miller</div>
-                  <div class="team-role">Medic specialist oftalmolog</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Doctor 3 -->
-            <div class="col-sm-6 col-md-3 col-lg-3 mb-sm-20 team-member" data-category="locatia-c">
-              <div class="team-item">
-                <div class="team-image">
-                  <img src="assets/images/Angajati/Anca_Craciun.png" alt="Anca Craciun"
-                    style="width:100%; height:300px; object-fit:cover;">
-                  <div class="team-detail">
-                    <p class="font-serif">Experiență în glaucom și boli
-                      retiniene</p>
-                    <div class="team-social">
-                      <a href="#"><i class="fa fa-phone"></i></a>
-                      <a href="#"><i class="fa fa-envelope"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="team-descr">
-                  <div class="team-name">Dr. Anca Crăciun</div>
-                  <div class="team-role">Medic specialist oftalmolog</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Doctor 4 -->
-            <div class="col-sm-6 col-md-3 col-lg-3 mb-sm-20 team-member" data-category="locatia-d">
-              <div class="team-item">
-                <div class="team-image">
-                  <img src="assets/images/Angajati/Andrei_Irimia.png" alt="Andrei Irimia"
-                    style="width:100%; height:300px; object-fit:cover;">
-                  <div class="team-detail">
-                    <p class="font-serif">Expert în chirurgia cataractei</p>
-                    <div class="team-social">
-                      <a href="#"><i class="fa fa-phone"></i></a>
-                      <a href="#"><i class="fa fa-envelope"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="team-descr">
-                  <div class="team-name">Dr. Andrei Irimia</div>
-                  <div class="team-role">Medic primar oftalmolog</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Doctor 5 -->
-            <div class="col-sm-6 col-md-3 col-lg-3 mb-sm-20 team-member" data-category="locatia-e">
-              <div class="team-item">
-                <div class="team-image">
-                  <img src="assets/images/Angajati/Cristina_Flondor.png" alt="Cristina Flondor"
-                    style="width:100%; height:300px; object-fit:cover;">
-                  <div class="team-detail">
-                    <p class="font-serif">Specializare în strabism și
-                      ambliopia</p>
-                    <div class="team-social">
-                      <a href="#"><i class="fa fa-phone"></i></a>
-                      <a href="#"><i class="fa fa-envelope"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="team-descr">
-                  <div class="team-name">Dr. Cristina Flondor</div>
-                  <div class="team-role">Medic primar oftalmolog</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Doctor 6 -->
-            <div class="col-sm-6 col-md-3 col-lg-3 mb-sm-20 team-member" data-category="locatia-a">
-              <div class="team-item">
-                <div class="team-image">
-                  <img src="assets/images/Angajati/Delia_Iftimie.png" alt="Delia Iftimie"
-                    style="width:100%; height:300px; object-fit:cover;">
-                  <div class="team-detail">
-                    <p class="font-serif">Specializare în boli ale polului
-                      anterior</p>
-                    <div class="team-social">
-                      <a href="#"><i class="fa fa-phone"></i></a>
-                      <a href="#"><i class="fa fa-envelope"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="team-descr">
-                  <div class="team-name">Dr. Delia Iftimie</div>
-                  <div class="team-role">Medic specialist oftalmolog</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Doctor 7 -->
-            <div class="col-sm-6 col-md-3 col-lg-3 mb-sm-20 team-member" data-category="locatia-b">
-              <div class="team-item">
-                <div class="team-image">
-                  <img src="assets/images/Angajati/Dana_Lupu.png" alt="Dana Lupu"
-                    style="width:100%; height:300px; object-fit:cover;">
-                  <div class="team-detail">
-                    <p class="font-serif">Expert în diagnosticul și
-                      tratamentul glaucomului</p>
-                    <div class="team-social">
-                      <a href="#"><i class="fa fa-phone"></i></a>
-                      <a href="#"><i class="fa fa-envelope"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="team-descr">
-                  <div class="team-name">Dr. Dana Lupu</div>
-                  <div class="team-role">Medic primar oftalmolog</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Doctor 8 -->
-            <div class="col-sm-6 col-md-3 col-lg-3 mb-sm-20 team-member" data-category="locatia-c">
-              <div class="team-item">
-                <div class="team-image">
-                  <img src="assets/images/Angajati/Roxana_Lungu.png" alt="Roxana Lungu"
-                    style="width:100%; height:300px; object-fit:cover;">
-                  <div class="team-detail">
-                    <p class="font-serif">Specialist în patologia
-                      retiniană</p>
-                    <div class="team-social">
-                      <a href="#"><i class="fa fa-phone"></i></a>
-                      <a href="#"><i class="fa fa-envelope"></i></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="team-descr">
-                  <div class="team-name">Dr. Roxana Lungu</div>
-                  <div class="team-role">Medic specialist oftalmolog</div>
-                </div>
-              </div>
+          <!-- Specialization Article Content (initially hidden) -->
+          <div class="specialization-article-container" style="display: none;">
+            <h3 class="article-title text-center"></h3>
+            <div class="article-content-wrapper">
+              <div class="article-text"></div>
+              <div class="article-image"></div>
             </div>
           </div>
+
         </div>
       </section>
+      <!-- END NEW SPECIALIZATIONS SECTION -->
+
+      <section class="module" id="echipa-noastra">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="module-title">ECHIPA NOASTRĂ</h2>
+                    <p class="module-subtitle">Selectați orașul pentru a vedea echipa noastră de profesioniști din fiecare locație.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <div id="team-filters-container" class="team-filters">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="team-carousel-viewport" class="carousel-viewport">
+                        <div id="team-grid" class="team-grid carousel-container">
+                        </div>
+                    </div>
+                    <div id="team-carousel-nav" class="carousel-nav" style="display: none;">
+                        <button id="prev-doctor" class="carousel-btn prev">‹</button>
+                        <button id="next-doctor" class="carousel-btn next">›</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
       <section class="module" id="pricing">
         <div class="container">
@@ -426,257 +248,359 @@
             <div class="col-sm-12 text-center mb-40">
               <div class="location-buttons-container">
                 <button type="button" class="btn btn-border-d btn-round location-btn" id="location-button"
-                  data-location="bacau">Bacău</button>
+                  data-location="clinica">Clinica<br> Bacău</button>
                 <button type="button" class="btn btn-border-d btn-round location-btn" id="location-button"
-                  data-location="moinesti">Moinești</button>
+                  data-location="bacau">Cabinet<br> Bacau</button>
                 <button type="button" class="btn btn-border-d btn-round location-btn" id="location-button"
-                  data-location="comanesti">Comănești</button>
+                  data-location="comanesti">Cabinet<br> Comănești</button>
+                <button type="button" class="btn btn-border-d btn-round location-btn" id="location-button"
+                  data-location="moinesti">Cabinet<br> Moinești</button>
+                <button type="button" class="btn btn-border-d btn-round location-btn" id="location-button"
+                  data-location="onesti">Cabinet<br> Onesti</button>
+                <button type="button" class="btn btn-border-d btn-round location-btn" id="location-button"
+                  data-location="comanesti">Sterge <br> Selectia</button>
               </div>
             </div>
           </div>
 
-          <div class="row price-row multi-columns-row" id="pricing-tables">
-            <div class="pricing-container">
-              <div class="col-sm-4 col-xs-12">
-                <div class="price-table standard">
-                  <h4>Consultație Standard</h4>
-                  <div class="borderline"></div>
-                  <p class="price"><span>RON</span><span class="price-value" data-bacau="150" data-moinesti="130"
-                      data-comanesti="120">---</span></p>
-                  <div class="price-details">
-                    <ul class="price-details">
-                      <li>Stabilire dioptrii</li>
-                      <li>Tensiune oculara</li>
-                      <li>Fund de ochi</li>
-                      <li><span>Glaucom</span></li>
-                      <li><span>Cataracta</span></li>
-                    </ul>
+          <div class="row price-row" id="pricing-tables">
+            <div class="pricing-carousel-component">
+              <div class="pricing-carousel-viewport">
+                <div class="pricing-cards-container">
+                  <!-- Card 1: Consultatie Standard -->
+                  <div class="pricing-card">
+                    <div style="border: 2px solid #1e3932; border-radius: 0; overflow: hidden; height: 100%;">
+                      <div
+                        style="background-color: #1e3932; color: #fff; padding: 18px 24px; border-radius: 0; text-align:center; font-size: 2em; font-weight: bold;">
+                        Consultație Standard
+                      </div>
+                      <div style="text-align:center; padding: 12px 0 6px;">
+                        <span style="font-size: 1.75em; color: #1e3932; font-weight: 600;">RON</span>
+                        <span class="price-value" data-bacau="150" data-moinesti="130" data-comanesti="120"
+                          style="font-size:2.2em; font-weight:700; margin-left:8px;">---</span>
+                      </div>
+                      <div style="height: 2px; width: 100%; background: #1e3932; margin: 0 0 14px 0; border-radius:0;">
+                      </div>
+                      <ul
+                        style="list-style: disc inside; margin: 0 0 18px 0; padding-left: 18px; color: #222; font-size: 1.75em;">
+                        <li style="color: black; font-style: normal; text-transform: lowercase;">stabilire dioptrii</li>
+                        <li style="color: black; font-style: normal; text-transform: lowercase;">tensiune oculară</li>
+                        <li style="color: black; font-style: normal; text-transform: lowercase;">fund de ochi</li>
+                        <li style="color: #f5f3ed; font-style: normal; text-transform: lowercase;"></li>
+                        <li style="color: #f5f3ed; font-style: normal; text-transform: lowercase;"></li>
+                      </ul>
+                    </div>
                   </div>
-                  <a class="btn btn-d btn-round" id="programare-button"
-                    href="https://eurooptik.ro.programarionline.sophtha.com/">Programare</a>
+
+                  <!-- Card 2: Consultatie Complexa -->
+                  <div class="pricing-card">
+                    <div style="border: 2px solid #4aa190a2; border-radius: 0; overflow: hidden; height: 100%;">
+                      <div
+                        style="background-color: #16987e; color: #fff; padding: 18px 24px; border-radius: 0; text-align:center; font-size: 2em; font-weight: bold;">
+                        Consultație Complexă
+                      </div>
+                      <div style="text-align:center; padding: 12px 0 6px;">
+                        <span style="font-size: 1.75em; color: #1e3932; font-weight: 600;">RON</span>
+                        <span class="price-value" data-bacau="250" data-moinesti="230" data-comanesti="220"
+                          style="font-size:2.2em; font-weight:700; margin-left:8px;">---</span>
+                      </div>
+                      <div
+                        style="height: 2px; width: 100%; background: #16987e; margin: 0 0 14px 0; border-radius:2px;">
+                      </div>
+                      <ul
+                        style="list-style: disc inside; margin: 0 0 18px 0; padding-left: 18px; color: #222; font-size: 1.75em;">
+                        <li style="font-style: normal; text-transform: lowercase;">stabilire dioptrii</li>
+                        <li style="font-style: normal; text-transform: lowercase;">tensiune oculara</li>
+                        <li style="font-style: normal; text-transform: lowercase;">fund de ochi</li>
+                        <li style="color: #16987e; font-style: normal; text-transform: lowercase;">glaucom</li>
+                        <li style="color: #f5f3ed; font-style: normal; text-transform: lowercase;"></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Card 3: Consultatie Premium -->
+                  <div class="pricing-card">
+                    <div style="border: 2px solid #d13775c2; overflow: hidden; height: 100%;">
+                      <div
+                        style="background-color: #d13775; color: #fff; padding: 18px 24px; text-align:center; font-size: 2em; font-weight: bold;">
+                        Consultație Premium
+                      </div>
+                      <div style="text-align:center; padding: 12px 24px 6px;">
+                        <span style="font-size: 1.75em; color: #d13775; font-weight: 600;">RON</span>
+                        <span class="price-value" data-bacau="350" data-moinesti="320" data-comanesti="300"
+                          style="font-size:2.2em; font-weight:700; margin-left:8px;">---</span>
+                      </div>
+                      <div style="height: 2px; width: 100%; background: #d13775; margin: 0 0 14px 0;"></div>
+                      <ul
+                        style="list-style: disc inside; margin: 0 0 18px 0; padding-left: 18px; color: #222; font-size: 1.75em; padding-right:24px; padding-left:24px;">
+                        <li style="font-style: normal; text-transform: lowercase;">stabilire dioptrii</li>
+                        <li style="font-style: normal; text-transform: lowercase;">tensiune oculara</li>
+                        <li style="font-style: normal; text-transform: lowercase;">fund de ochi</li>
+                        <li style="color: #16987e; font-style: normal; text-transform: lowercase;">glaucom</li>
+                        <li style="color: #d13775; font-style: normal; text-transform: lowercase;">cataracta</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div class="col-sm-4 col-xs-12">
-                <div class="price-table complex" style="border: 2px solid #4aa190a2;">
-                  <h4>Consultație Complexă</h4>
-                  <div class="borderline"></div>
-                  <p class="price"><span>RON</span><span class="price-value" data-bacau="250" data-moinesti="230"
-                      data-comanesti="220">---</span></p>
-                  <div class="price-details">
-                    <ul class="price-details">
-                      <li>Stabilire dioptrii</li>
-                      <li>Tensiune oculara</li>
-                      <li>Fund de ochi</li>
-                      <li>Glaucom</li>
-                      <li><span>Cataracta</span></li>
-                    </ul>
-                  </div>
-                  <a class="btn btn-d btn-round" id="programare-button"
-                    href="https://eurooptik.ro.programarionline.sophtha.com/">Programare</a>
-                </div>
-              </div>
-
-              <div class="col-sm-4 col-xs-12">
-                <div class="price-table premium" style="border: 2px solid #d13775c2;">
-                  <h4>Consultație Premium</h4>
-                  <div class="borderline"></div>
-                  <p class="price"><span>RON</span><span class="price-value" data-bacau="350" data-moinesti="320"
-                      data-comanesti="300">---</span></p>
-                  <div class="price-details">
-                    <ul class="price-details">
-                      <li>Stabilire dioptrii</li>
-                      <li>Tensiune oculara</li>
-                      <li>Fund de ochi</li>
-                      <li>Glaucom</li>
-                      <li>Cataracta</li>
-                    </ul>
-                  </div>
-                  <a class="btn btn-d btn-round" id="programare-button"
-                    href="https://eurooptik.ro.programarionline.sophtha.com/">Programare</a>
+              <!-- Navigation Buttons for Pricing Cards -->
+              <div style="height: 48px;"></div>
+              <div
+                style="display: flex; justify-content: center; align-items: center; margin: 24px 0 0 0; gap: 24px; width: 100%; padding-top: 24px;">
+                <div style="margin: 0 auto; display: flex; gap: 24px;">
+                  <button type="button" class="btn-circle pricing-prev" aria-label="Previous" disabled>
+                    <i class="fa fa-chevron-left"></i>
+                  </button>
+                  <button type="button" class="btn-circle pricing-next" aria-label="Next">
+                    <i class="fa fa-chevron-right"></i>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
+          <script>
+            (function () {
+              const container = document.querySelector('.pricing-cards-container');
+              if (!container) return; // Exit if the container doesn't exist
+
+              const cards = container.querySelectorAll('.pricing-card');
+              const prevBtn = document.querySelector('.pricing-prev');
+              const nextBtn = document.querySelector('.pricing-next');
+              const viewport = document.querySelector('.pricing-carousel-viewport');
+
+              let currentIndex = 0;
+              const totalCards = cards.length;
+
+              function updateCarousel() {
+                const offset = -currentIndex * 100;
+                container.style.transform = 'translateX(' + offset + '%)';
+
+                // Update button states
+                prevBtn.disabled = (currentIndex === 0);
+                nextBtn.disabled = (currentIndex >= totalCards - 1);
+              }
+
+              prevBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                  currentIndex--;
+                  updateCarousel();
+                }
+              });
+
+              nextBtn.addEventListener('click', () => {
+                if (currentIndex < totalCards - 1) {
+                  currentIndex++;
+                  updateCarousel();
+                }
+              });
+
+              // Swipe support for mobile
+              let startX = null;
+              viewport.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+              }, { passive: true });
+
+              viewport.addEventListener('touchend', (e) => {
+                if (startX === null) return;
+                let endX = e.changedTouches[0].clientX;
+                let diffX = endX - startX;
+
+                if (diffX > 50) { // Swiped right
+                  prevBtn.click();
+                } else if (diffX < -50) { // Swiped left
+                  nextBtn.click();
+                }
+                startX = null;
+              });
+
+              // Initialize
+              updateCarousel();
+            })();
+          </script>
         </div>
       </section>
 
-      <section class="module" id="works-copy" style="background-color: #39a58f28;">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-              <h2 class="module-title">TOATE SERVICIILE</h2>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 text-center">
-              <ul class="filter" id="filters-copy"> <!-- Changed ID to avoid conflict -->
-                <li><a class="wow fadeInUp filters-copy-btn" href="#" data-filter="*">Dr. oftalmologi <span
-                      class="arrow-indicator"></span></a>
-                </li>
-                <li><a class="wow fadeInUp filters-copy-btn" href="#" data-filter=".illustration" id=""
-                    data-wow-delay="0.2s">Clinica Bacău <span class="arrow-indicator"></span></a></li>
-                <li><a class="wow fadeInUp filters-copy-btn" href="#" data-filter=".illustration"
-                    data-wow-delay="0.2s">Cabinet Bacău <span class="arrow-indicator"></span></a></li>
-                <li><a class="wow fadeInUp filters-copy-btn" href="#" data-filter=".marketing"
-                    data-wow-delay="0.4s">Cabinet Moinești <span class="arrow-indicator"></span></a></li>
-                <li><a class="wow fadeInUp filters-copy-btn" href="#" data-filter=".photography"
-                    data-wow-delay="0.6s">Cabinet Onești <span class="arrow-indicator"></span></a></li>
-                <li><a class="wow fadeInUp filters-copy-btn" href="#" data-filter=".webdesign"
-                    data-wow-delay="0.6s">Cabinet Comănești <span class="arrow-indicator"></span></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <ul class="works-grid works-grid-gut works-hover-w" id="works-grid-copy"> <!-- Changed ID to avoid conflict -->
-          <li class="work-item illustration webdesign">
-            <a href="assets/images/green.png" data-caption="test">
-              <div class="work-image"><img src="assets/images/green.png" alt="Portfolio Item" /></div>
-              <div class="team-name" id="nume-doctori">Mihai Stancu</div>
-              <div class="team-role" id="descriere-doctori"> Optometrist</div>
-            </a>
-          </li>
-          <li class="work-item illustration webdesign">
-            <a href="assets/images/green.png" data-caption="test">
-              <div class="work-image"><img src="assets/images/green.png" alt="Portfolio Item" /></div>
-              <div class="team-name" id="nume-doctori">Mihai Stancu</div>
-              <div class="team-role" id="descriere-doctori"> Optometrist</div>
-            </a>
-          </li>
-          <li class="work-item marketing photography">
-            <a href="assets/images/green.png" data-caption="Bag MockUp - Marketing">
-              <div class="work-image"><img src="assets/images/green.png" alt="Portfolio Item" /></div>
-              <div class="team-name" id="nume-doctori">Mihai Stancu</div>
-              <div class="team-role" id="descriere-doctori"> Optometrist</div>
-            </a>
-          </li>
-          <li class="work-item illustration photography">
-            <a href="assets/images/green.png" data-caption="Disk Cover - Illustration">
-              <div class="work-image"><img src="assets/images/green.png" alt="Portfolio Item" /></div>
-              <div class="team-name" id="nume-doctori">Mihai Stancu</div>
-              <div class="team-role" id="descriere-doctori"> Optometrist</div>
-            </a>
-          </li>
-          <li class="work-item marketing photography">
-            <a href="assets/images/green.png" data-caption="Business Card - Photography">
-              <div class="work-image"><img src="assets/images/green.png" alt="Portfolio Item" /></div>
-              <div class="team-name" id="nume-doctori">Mihai Stancu</div>
-              <div class="team-role" id="descriere-doctori"> Optometrist</div>
-            </a>
-          </li>
-          <li class="work-item illustration webdesign">
-            <a href="assets/images/green.png" data-caption="Business Card - Webdesign">
-              <div class="work-image"><img src="assets/images/green.png" alt=" Portfolio Item" /></div>
-              <div class="team-name" id="nume-doctori">Mihai Stancu</div>
-              <div class="team-role" id="descriere-doctori"> Optometrist</div>
-            </a>
-          </li>
-          <li class="work-item marketing webdesign">
-            <a href="assets/images/green.png" data-caption="Business Cards in paper clip - Marketing">
-              <div class="work-image"><img src="assets/images/green.png" alt="Portfolio Item" /></div>
-              <div class="team-name" id="nume-doctori">Mihai Stancu</div>
-              <div class="team-role" id="descriere-doctori"> Optometrist</div>
-            </a>
-          </li>
-        </ul>
-      </section>
-    </div>
-    </div>
-    </div>
-    </section>
+      <section id="our-services-section">
+          <div id="our-services-container">
+              <h2 class="section-title">SERVICIILE NOASTRE</h2>
+              <p class="section-subtitle"><i>Selectați categoria pentru a vedea serviciile aferente.</i></p>
 
-    <section class="module" id="testimoniale" style="background-color: #504c4c;">
-      <div class="container">
+              <div id="services-filter-container">
+              </div>
+          </div>
+
+          <div id="services-carousel-wrapper">
+              <div id="services-carousel-container">
+                  <div id="services-carousel-slider">
+                  </div>
+                  <button class="carousel-arrow prev" aria-label="Previous slide">❮</button>
+                  <button class="carousel-arrow next" aria-label="Next slide">❯</button>
+              </div>
+              <div id="services-carousel-dots">
+              </div>
+          </div>
+      </section>
+
+      <section class="module" id="testimoniale" style="padding: 0;">
+        <div class="testimonial-wrapper">
+          <div id="testimonial-text-area" class="testimonial-text-area">
+            <div class="testimonial-text-inner">
+              <div class="module-header text-center text-lg-left">
+                <h2 class="module-title" style="color: #F5F3ED;">TESTIMONIALE</h2>
+                <p class="module-subtitle" style="color: #cccccc;">Ce spun pacienții noștri</p>
+              </div>
+              <div id="testimonial-content-wrapper">
+              </div>
+            </div>
+          </div>
+          
+          <div id="image-container" class="image-container">
+            <div class="loader" style="color: #fff; text-align: center;">Loading testimonials...</div>
+          </div>
+          
+        </div>
+      </section>
+
+        <section id="adresses" class="module">
+      <div class="container"> <!-- This container now only holds the title and subtitle -->
         <div class="row">
           <div class="col-sm-6 col-sm-offset-3">
-            <h2 class="module-title" style="color: #F5F3ED;">TESTIMONIALE</h2>
+            <h2 class="module-title">LOCATIILE NOASTRE</h2>
+            <div class="module-subtitle">Găsește clinica Eurooptik cea mai apropiată de tine.</div>
           </div>
         </div>
-        <div class="row">
+      </div> <!-- End of container for title/subtitle -->
+
+      <!-- These elements are now outside the main container to allow full width -->
+      <div class="carousel-viewport">
+        <div class="location-cards-container">
+
+          <!-- Card 1: Clinica Bacau -->
+          <a href="https://g.co/kgs/CF3ZXSp" target="_blank" rel="noopener noreferrer" class="location-card">
+            <div class="location-card-header">
+              <h5>Clinica<br>Bacau</h5>
+            </div>
+            <div class="location-card-image">
+              <img src="assets/images/locations/eurooptik_clinica.png" alt="Clinica Bacau">
+            </div>
+            <div class="location-card-details">
+              <p class="location-address"><i class="fas fa-map-marker-alt"></i>str. Stefan cel Mare Nr. 7</p>
+              <p class="contact-info"><i class="fa fa-phone"></i>0760 676 303</p>
+              <p class="contact-info"><i class="fa fa-envelope"></i>bacau@yahoo.com</p>
+            </div>
+          </a>
+
+          <!-- Card 2: Cabinet Bacau -->
+          <a href="https://g.co/kgs/kF5B3ia" target="_blank" rel="noopener noreferrer" class="location-card">
+            <div class="location-card-header">
+              <h5>Cabinet<br>Bacau</h5>
+            </div>
+            <div class="location-card-image">
+              <img src="assets/images/locations/eurooptik_razboieni.png" alt="Cabinet Bacau">
+            </div>
+            <div class="location-card-details">
+              <p class="location-address"><i class="fas fa-map-marker-alt"></i>str. Razboieni Nr. 7</p>
+              <p class="contact-info"><i class="fa fa-phone"></i>0760 676 304</p>
+              <p class="contact-info"><i class="fa fa-envelope"></i>bacau@yahoo.com</p>
+            </div>
+          </a>
+
+          <!-- Card 3: Cabinet Moinesti -->
+          <a href="https://g.co/kgs/5yqERUP" target="_blank" rel="noopener noreferrer" class="location-card">
+            <div class="location-card-header">
+              <h5>Cabinet<br>Moinesti</h5>
+            </div>
+            <div class="location-card-image">
+              <img src="assets/images/locations/eurooptik_moinesti.png" alt="Cabinet Moinesti">
+            </div>
+            <div class="location-card-details">
+              <p class="location-address"><i class="fas fa-map-marker-alt"></i>str. T. Vladimirescu Nr. 177</p>
+              <p class="contact-info"><i class="fa fa-phone"></i>0760 676 308</p>
+              <p class="contact-info"><i class="fa fa-envelope"></i>bacau@yahoo.com</p>
+            </div>
+          </a>
+
+          <!-- Card 4: Cabinet Comanesti -->
+          <a href="https://g.co/kgs/c5HFjzz" target="_blank" rel="noopener noreferrer" class="location-card">
+            <div class="location-card-header">
+              <h5>Cabinet<br>Comanesti</h5>
+            </div>
+            <div class="location-card-image">
+              <img src="assets/images/locations/eurooptik_comanesti.png" alt="Cabinet Comanesti">
+            </div>
+            <div class="location-card-details">
+              <p class="location-address"><i class="fas fa-map-marker-alt"></i>str. Nicolae Ghica Nr. 2</p>
+              <p class="contact-info"><i class="fa fa-phone"></i>0760 676 309</p>
+              <p class="contact-info"><i class="fa fa-envelope"></i>bacau@yahoo.com</p>
+            </div>
+          </a>
+
+          <!-- Card 5: Cabinet Onesti -->
+          <a href="https://g.co/kgs/qbvbxa7" target="_blank" rel="noopener noreferrer" class="location-card">
+            <div class="location-card-header">
+              <h5>Cabinet<br>Onesti</h5>
+            </div>
+            <div class="location-card-image">
+              <img src="assets/images/locations/eurooptik_onesti.png" alt="Cabinet Onesti">
+            </div>
+            <div class="location-card-details">
+              <p class="location-address"><i class="fas fa-map-marker-alt"></i>str. Postei Nr. 6</p>
+              <p class="contact-info"><i class="fa fa-phone"></i>0760 676 306</p>
+              <p class="contact-info"><i class="fa fa-envelope"></i>bacau@yahoo.com</p>
+            </div>
+          </a>
 
         </div>
       </div>
-    </section>
 
-
-    <section id="adresses">
-      <div class="container">
-        <h2>LOCATIILE NOASTRE & CONTACT</h2>
-
-        <div class="carousel-viewport">
-          <div class="location-cards-container">
-
-            <!-- Card 1: Clinica Bacau -->
-            <a href="https://g.co/kgs/CF3ZXSp" 
-            target="_blank" rel="noopener noreferrer" class="location-card card-bg-clinica">
-              <div class="card-content">
-                <h5>Clinica Bacau</h5>
-                <p class="location-address">str. Stefan cel Mare Nr.7</p>
-                <p class="contact-info"><i class="fa fa-phone"></i>0760 676 303</p>
-                <p class="contact-info"><i class="fa fa-envelope"></i>bacau@yahoo.com</p>
-              </div>
-            </a>
-
-            <!-- Card 2: Cabinet Bacau -->
-            <a href="https://g.co/kgs/kF5B3ia"
-             target="_blank" rel="noopener noreferrer" class="location-card card-bg-razboieni">
-              <div class="card-content">
-                <h5>Cabinet Bacau</h5>
-                <p class="location-address">str. Razboieni Nr.7</p>
-                <p class="contact-info"><i class="fa fa-phone"></i>0760 676 304</p>
-                <p class="contact-info"><i class="fa fa-envelope"></i>bacau@yahoo.com</p>
-              </div>
-            </a>
-
-            <!-- Card 3: Cabinet Moinesti -->
-            <a href="https://g.co/kgs/5yqERUP"
-             target="_blank" rel="noopener noreferrer" class="location-card card-bg-moinesti">
-              <div class="card-content">
-                <h5>Cabinet Moinesti</h5>
-                <p class="location-address">str. T. Vladimirescu Nr.177</p>
-                <p class="contact-info"><i class="fa fa-phone"></i>0760 676 308</p>
-                <p class="contact-info"><i class="fa fa-envelope"></i>bacau@yahoo.com</p>
-              </div>
-            </a>
-
-            <!-- Card 4: Cabinet Comanesti -->
-            <a href="https://g.co/kgs/c5HFjzz"
-             target="_blank" rel="noopener noreferrer" class="location-card card-bg-comanesti">
-              <div class="card-content">
-                <h5>Cabinet Comanesti</h5>
-                <p class="location-address">str. Nicolae Ghica Nr.2</p>
-                <p class="contact-info"><i class="fa fa-phone"></i>0760 676 309</p>
-                <p class="contact-info"><i class="fa fa-envelope"></i>bacau@yahoo.com</p>
-              </div>
-            </a>
-
-            <!-- Card 5: Cabinet Onesti -->
-            <a href="https://g.co/kgs/qbvbxa7"
-             target="_blank" rel="noopener noreferrer" class="location-card card-bg-onesti">
-              <div class="card-content">
-                <h5>Cabinet Onesti</h5>
-                <p class="location-address">str. Postei Nr.6</p>
-                <p class="contact-info"><i class="fa fa-phone"></i>0760 676 306</p>
-                <p class="contact-info"><i class="fa fa-envelope"></i>bacau@yahoo.com</p>
-              </div>
-            </a>
-
-          </div>
-        </div>
-
+      <div class="container"> <!-- This container now holds only the carousel navigation -->
         <div class="carousel-nav">
           <button id="prev-location" class="carousel-btn"><i class="fa fa-chevron-left"></i></button>
           <button id="next-location" class="carousel-btn"><i class="fa fa-chevron-right"></i></button>
         </div>
-
       </div>
     </section>
 
+    <!-- NEW SPONSORS SECTION START -->
+    <section id="sponsors" class="module">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3">
+            <h2 class="module-title">PARTENERII NOSTRI</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-viewport sponsors-carousel-viewport">
+        <div class="sponsors-cards-container">
+          <!-- Sponsor Card 1 -->
+          <div class="sponsor-card">
+            <div class="sponsor-image-wrapper">
+              <img src="assets/images/sponsors/blood.png" alt="Blood Sponsor">
+            </div>
+          </div>
+          <!-- Sponsor Card 2 -->
+          <div class="sponsor-card">
+            <div class="sponsor-image-wrapper">
+              <img src="assets/images/sponsors/luxor.png" alt="Luxor Sponsor">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container"> <!-- Container for the navigation buttons -->
+        <div class="carousel-nav sponsors-carousel-nav">
+          <button id="prev-sponsor" class="carousel-btn"><i class="fa fa-chevron-left"></i></button>
+          <button id="next-sponsor" class="carousel-btn"><i class="fa fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+    <!-- NEW SPONSORS SECTION END -->
+
     <section id="programare-section" style="display:none; padding:40px 0; background:#f9f9f9;">
       <button onclick="hideProgramareSection()"
-        style="float:right; margin:10px; font-size:22px; font-weight:bold; background:none; border:none; cursor:pointer;">&times;</button>
+        style="float:right; margin:10px; font-size:22px; font-weight:bold; background:none; border:none; cursor:pointer;">×</button>
       <h2>Programează-te online</h2>
       <div style="width:100%; max-width:900px; margin:auto;">
         <iframe src="https://eurooptik.ro.programarionline.sophtha.com/"
@@ -686,33 +610,33 @@
 
     <hr class="divider-d">
     <footer class="footer">
-        <section class="footer-message">
-          <h2>Va mai asteptam la noi!</h2>
-          <button class="footer-appointment-btn">Programeaza-te online</button>
-        </section>
-        <div class="footer-content">
-          <div class="footer-locations">
-            <div class="footer-location"><span class="footer-location-name">Bacau - clinica</span><br>Luni - Vineri, 9 - 17</div>
-            <div class="footer-location"><span class="footer-location-name">Bacau</span><br>Luni - Vineri, 9 - 17</div>
-            <div class="footer-location"><span class="footer-location-name">Moinesti</span><br>Luni - Vineri, 8 - 16</div>
-            <div class="footer-location"><span class="footer-location-name">Comanesti</span><br>Luni - Vineri, 9 - 17</div>
-            <div class="footer-location"><span class="footer-location-name">Onesti</span><br>Luni - Vineri, 9 - 17</div>
-          </div>
-          <div class="footer-center">
-            <nav class="footer-menu">
-              <a href="#totop">Acasa</a>
-              <a href="#services">Serviciile Noastre</a>
-              <a href="#echipa-noastra">Echipa Noastra</a>
-              <a href="#pricing">Tarife</a>
-              <a href="#testimoniale">Testimoniale</a>
-              <a href="#adresses">Contact</a>
-            </nav>
-            <div class="footer-logo">
-              <img class="footer-logo-image" src="assets/images/logo-small.png" alt="eurooptik logo">
-            </div>
+      <section class="footer-message">
+        <h2>Va mai asteptam la noi!</h2>
+        <button class="footer-appointment-btn">Programeaza-te online</button>
+      </section>
+      <div class="footer-content">
+        <div class="footer-locations">
+          <div class="footer-location"><span class="footer-location-name">Bacau - clinica</span><br>Luni - Vineri, 9 - 17</div>
+          <div class="footer-location"><span class="footer-location-name">Bacau</span><br>Luni - Vineri, 9 - 17</div>
+          <div class="footer-location"><span class="footer-location-name">Moinesti</span><br>Luni - Vineri, 8 - 16</div>
+          <div class="footer-location"><span class="footer-location-name">Comanesti</span><br>Luni - Vineri, 9 - 17</div>
+          <div class="footer-location"><span class="footer-location-name">Onesti</span><br>Luni - Vineri, 9 - 17</div>
+        </div>
+        <div class="footer-center">
+          <nav class="footer-menu">
+            <a href="#totop">Acasa</a>
+            <a href="#services">Serviciile Noastre</a>
+            <a href="#echipa-noastra">Echipa Noastra</a>
+            <a href="#pricing">Tarife</a>
+            <a href="#testimoniale">Testimoniale</a>
+            <a href="#adresses">Contact</a>
+          </nav>
+          <div class="footer-logo">
+            <img class="footer-logo-image" src="assets/images/logo-small.png" alt="eurooptik logo">
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
     </div>
 
     <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
@@ -735,45 +659,15 @@
   <script src="assets/js/plugins.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/carousel.js"></script>
-
-  <!-- Inline script to ensure filtering works correctly -->
-  <script>
-    $(document).ready(function () {
-      // Direct team filter implementation
-      $('.team-filter-btn').on('click', function () {
-        var filterValue = $(this).attr('data-filter');
-
-        // Update active state on buttons
-        $('.team-filter-btn').removeClass('active');
-        $(this).addClass('active');
-
-        // All buttons remain magenta now, just track active state
-        // No need to toggle btn-d and btn-border-d classes anymore
-
-        // First remove any existing animation classes
-        $('.team-member').removeClass('fadeIn cardAppear');
-
-        // Show/hide team members based on filter with animation - show simultaneously
-        if (filterValue === 'all') {
-          // Show all members simultaneously
-          $('.team-member').show().addClass('cardAppear');
-        } else {
-          $('.team-member').hide();
-          // Show filtered members simultaneously
-          $('.team-member[data-category="' + filterValue + '"]').show().addClass('cardAppear');
-        }
-
-        return false;
-      });
-
-      // Make sure initial state has the "all" button properly styled with active class
-      $('.team-filter-btn[data-filter="all"]').addClass('active');
-
-      // Add initial animation to all team members - show simultaneously
-      $('.team-member').addClass('fadeIn');
-    });
-  </script>
-
+  <script type="module" src="assets/js/team.js"></script>
+  <script type="module" src="assets/js/testimonials.js"></script>
+  <script type="module" src="assets/js/services.js"></script>
+  <script src="assets/js/new-specializations.js"></script>
+  <script type="module" src="assets/js/config.js"></script>
+  <script src="https://unpkg.com/contentful@latest/dist/contentful.browser.min.js"></script>
+  <script src="assets/js/sponsors.js"></script> <!-- NEW: Link to sponsors JS -->
+  <script type="module" src="assets/js/contentful-service.js"></script>
+  
   <script>
     function showProgramareSection() {
       const section = document.getElementById('programare-section');
@@ -785,8 +679,6 @@
     }
   </script>
 
-  <!-- Team section specific script -->
-  <script src="assets/js/team.js"></script>
 
 </body>
 

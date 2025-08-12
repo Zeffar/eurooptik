@@ -1,0 +1,43 @@
+
+name: Eurooptik Website Deploy
+
+on:
+  push:
+    branches: [ master ] 
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Inject Contentful Secrets
+        run: |
+          # This command finds the placeholder in your JS file and replaces it with the real secret.
+          # IMPORTANT: Change 'your-script-file.js' to the actual name and path of your JS file.
+          sed -i "s|__CONTENTFUL_SPACE_ID__|${{ secrets.CONTENTFUL_SPACE_ID }}|g" assets/js/contentful-service.js
+          sed -i "s|__CONTENTFUL_ACCESS_TOKEN__|${{ secrets.CONTENTFUL_ACCESS_TOKEN }}|g" assets/js/contentful-service.js
+
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' 
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

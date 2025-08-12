@@ -1,0 +1,120 @@
+/* assets/css/prices.css */
+
+.pricing-carousel-viewport {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.pricing-cards-container {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  padding-top: 16px;
+}
+
+.pricing-card {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.btn-circle {
+  background: #d13775;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  max-width: 48px;
+  max-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 0;
+  aspect-ratio: 1 / 1;
+}
+
+.btn-circle:disabled,
+.btn-circle[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.btn-circle:hover,
+.btn-circle:focus {
+  background: #b42c61;
+  color: #fff;
+  outline: none;
+}
+
+.btn-circle .fa {
+  color: #fff;
+}
+
+/* --- Styles for Large Screens --- */
+/* On screens 992px and wider, display all cards and hide navigation */
+@media (min-width: 992px) {
+  .pricing-carousel-viewport {
+    max-width: none; /* Remove the width constraint */
+    overflow: visible; /* Make overflowing cards visible */
+  }
+
+  .pricing-cards-container {
+    justify-content: center; /* Center the cards */
+    gap: 20px; /* Add space between cards */
+    /* Override the transform property from the script to ensure they stay put */
+    transform: none !important;
+  }
+
+  .pricing-card {
+    flex-basis: 33.333%; /* Allow three cards to fit */
+    max-width: 400px; /* Set a max-width for aesthetics */
+  }
+
+  /* Hide the navigation buttons as they are not needed */
+  .pricing-prev,
+  .pricing-next {
+    display: none;
+  }
+}
+
+/* --- CSS For Two-Line Buttons on Large Screens --- */
+
+@media (min-width: 992px) {
+
+  .team-filter-btn,
+  .location-btn {
+    
+    /* 1. Set a NARROW, fixed width to force text wrapping. */
+    /* THIS IS THE VALUE YOU WILL NEED TO ADJUST. */
+    width: 120px; 
+    
+    /* 2. Set a taller, fixed height to ensure all buttons are uniform. */
+    /* Adjust this to make the button taller or shorter. */
+    height: 65px;
+
+    /* 3. Use Flexbox for perfect centering. */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 4. Ensure text inside is centered. */
+    text-align: center;
+
+    /* 5. IMPORTANT: Remove or override any 'white-space: nowrap' rule. */
+    white-space: normal; /* This allows text to wrap. */
+
+    /* 6. Adjust padding as needed, usually less is needed with fixed height. */
+    padding: 5px;
+    
+    /* 7. (Optional) Smoother transition for a polished look. */
+    transition: all 0.2s ease-in-out;
+  }
+
+}

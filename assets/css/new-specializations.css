@@ -1,0 +1,257 @@
+/* assets/css/new-specializations.css */
+
+#new-specializations {
+  padding: 80px 0;
+  background-color: #f5f3ed; /* Light background for the section */
+}
+
+#new-specializations .module-title {
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Main Category Buttons */
+.specialization-category-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.specialization-category-buttons .category-btn {
+  background-color: #333; /* Black background */
+  color: #fff;
+  border: 2px solid #333;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  font-weight: 600;
+  border-radius: 50px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  flex: 0 1 calc(33.33% - 20px); /* Roughly 1/3 width, accounting for gap */
+  max-width: 300px; /* Max width to prevent them from getting too wide on large screens */
+  text-align: center;
+}
+
+.specialization-category-buttons .category-btn:hover {
+  background-color: #555;
+  border-color: #555;
+}
+
+.specialization-category-buttons .category-btn.active {
+  background-color: #d13775; /* Pink for active */
+  border-color: #d13775;
+  color: white;
+}
+
+/* Carousel Wrapper */
+.specialization-carousel-wrapper {
+  position: relative;
+  overflow: hidden; /* Hide cards outside the view */
+  padding: 0 40px; /* Space for nav buttons */
+  margin-bottom: 50px;
+}
+
+.specialization-carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 20px; /* Gap between cards */
+  /* --- IMPORTANT: Removed overflow-x and scroll-snap properties here --- */
+}
+
+/* Individual Specialization Card */
+.specialization-card {
+  /* Calculate min-width for 3 cards visible, accounting for 2 gaps */
+  min-width: calc((100% - 2 * 20px) / 3);
+  flex: 0 0 auto; /* Do not grow or shrink */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex; /* Use flexbox for image and title alignment */
+  flex-direction: column;
+}
+
+.specialization-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.specialization-card.active {
+  border: 3px solid #d13775; /* Highlight active card */
+}
+
+.specialization-card .card-image-container {
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio (9/16 = 0.5625) */
+  position: relative;
+  overflow: hidden;
+  background-color: #eee; /* Placeholder background */
+}
+
+.specialization-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.specialization-card .card-title {
+  padding: 15px;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin: 0;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.carousel-nav-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-nav-btn.prev-card {
+  left: 0;
+}
+
+.carousel-nav-btn.next-card {
+  right: 0;
+}
+
+.carousel-nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Specialization Article Content */
+.specialization-article-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-top: 40px;
+}
+
+.specialization-article-container .article-title {
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.article-content-wrapper {
+  display: flex;
+  gap: 30px;
+  /* --- CHANGE HERE: Vertically center content on large screens --- */
+  align-items: center; /* Align content to the center vertically */
+}
+
+/* Desktop styles for article content (Large Screens) */
+/* Image on left (2/3 width) */
+.article-image {
+  flex: 0 0 calc(66.66% - 15px); /* 2/3 of the available space, accounting for half the gap */
+  max-width: calc(66.66% - 15px);
+  position: relative;
+  padding-bottom: 56.25%; /* Maintain 16:9 Aspect Ratio for the image container */
+  background-color: #eee; /* Placeholder background */
+  border-radius: 8px;
+  overflow: hidden;
+  order: 1; /* Ensures image comes first (left) in flex order */
+}
+
+.article-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Text on right (1/3 width) */
+.article-text {
+  flex: 0 0 calc(33.33% - 15px); /* 1/3 of the available space, accounting for half the gap */
+  max-width: calc(33.33% - 15px);
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #555;
+  order: 2; /* Ensures text comes second (right) in flex order */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) { /* Tablet and smaller */
+  /* ... (carousel adjustments remain the same) ... */
+
+  .article-content-wrapper {
+    flex-direction: column; /* Stack image and text vertically */
+  }
+  .article-text,
+  .article-image {
+    flex: none; /* Remove flex sizing */
+    width: 100%; /* Take full width */
+    max-width: 100%;
+    order: unset; /* Remove explicit order, revert to HTML document order */
+  }
+  .article-image {
+    padding-bottom: 56.25%; /* Maintain 16:9 for full width image on mobile */
+  }
+}
+
+@media (max-width: 767px) { /* Mobile */
+  .specialization-category-buttons {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .specialization-category-buttons .category-btn {
+    flex: 0 0 calc(33.33% - 14px);
+    max-width: 150px;
+    /* --- NEW/MODIFIED RULE HERE --- */
+    white-space: normal; /* Allows text to wrap onto multiple lines */
+    min-height: 60px; /* Ensure enough height for two lines of text (adjust as needed) */
+    display: flex; /* Use flexbox to vertically center the wrapped text */
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
+  }
+
+  .specialization-card {
+    min-width: 100%; /* 1 card per row */
+  }
+  .specialization-carousel-wrapper {
+    padding: 0; /* Remove padding, buttons will be managed by JS */
+    /* No need for flex-direction: column here, JS handles moving buttons */
+  }
+  .specialization-carousel-container {
+    width: 100%; /* Take full width of wrapper */
+  }
+  /* Wrapper for mobile nav buttons, created by JS */
+  .specialization-carousel-nav-mobile {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+}

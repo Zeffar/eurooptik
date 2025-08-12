@@ -1,0 +1,155 @@
+/* Base font for all text */
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400; /* Regular default font weight for general text */
+}
+
+/* Titles: bold and capitalized */
+.module-title,
+.section-title,
+.specialization-card .card-title,
+.specialization-article-container .article-title,
+/* Targeting the header of pricing cards */
+.pricing-card > div > div:first-child,
+.location-card-header h5,
+#programare-section h2,
+.footer-message h2,
+.footer-location-name,
+.service-card-title {
+  font-weight: 700; /* Bold */
+  text-transform: uppercase;
+}
+
+/* Instructions/Subtitles: regular */
+.module-subtitle,
+.section-subtitle {
+  font-weight: 400; /* Regular */
+  text-transform: none;
+}
+
+/* Ensure general text elements are regular */
+/* This covers most paragraphs, list items, and general text */
+p, li, blockquote, span, a {
+    font-weight: 400; /* Regular */
+    text-transform: none; /* Ensure no unwanted capitalization */
+}
+
+/* Specific overrides for elements that should be bold/capitalized but might be caught by general rules */
+/* Buttons that are prominent or category selectors */
+.btn, /* General button class */
+.btn-round, /* Specific round button class */
+.category-btn, /* Specialization category buttons */
+.location-btn, /* Pricing location buttons */
+.footer-appointment-btn, /* Footer button */
+#navbar-button-programare, /* Navbar programare button */
+#home-appointment-button, /* Home programare button */
+#home-cine-suntem-button /* Home specializations button */
+{
+  font-weight: 700; /* Bold */
+  text-transform: uppercase; /* Capitalized */
+}
+
+/* Navbar regular links should remain regular */
+.navbar-custom .nav > li > a:not(#navbar-button-programare) {
+    font-weight: 400; /* Regular */
+    text-transform: none; /* Not capitalized */
+}
+
+/* Special case for pricing card price value - should be bold */
+.pricing-card .price-value,
+.pricing-card > div > div:nth-child(2) span:first-child /* RON text */ {
+  font-weight: 700; /* Bold */
+}
+
+/* Ensure the pricing card list items remain lowercase and regular */
+.pricing-card ul li {
+    font-weight: 400; /* Ensure it's regular */
+    /* The text-transform: lowercase is already set inline in HTML, so no need to repeat here */
+}
+
+/* Ensure the service section subtitle remains italic and regular */
+#our-services-section .section-subtitle i {
+    font-style: italic; /* Preserve italic */
+    font-weight: 400; /* Ensure it's regular */
+    text-transform: none; /* Ensure it's not capitalized */
+}
+
+/* Ensure testimonial quote and author are regular */
+.testimonial-quote, .testimonial-author {
+    font-weight: 400;
+    text-transform: none;
+}
+
+/* Ensure location card details are regular */
+.location-card-details p {
+    font-weight: 400;
+    text-transform: none;
+}
+
+/* Ensure footer location details are regular */
+.footer-location {
+    font-weight: 400;
+    text-transform: none;
+}
+
+/* Ensure footer menu links are regular */
+.footer-menu a {
+    font-weight: 400;
+    text-transform: none;
+}
+
+/* Reset heading font-weight to inherit from body or specific rules */
+/* This helps prevent default browser/framework bolding from overriding custom rules */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;
+}
+
+/* Make the header taller */
+.navbar-custom {
+  padding-top: 1px; /* Increase this value to make it taller */
+  padding-bottom: 6px; /* Increase this value to make it taller */
+  transition: padding 0.3s ease; /* Smooth transition for shrinking effect */
+}
+
+/* Adjust logo positioning for the new taller header */
+/* Mobile logo adjustment */
+.navbar-brand-center.visible-xs .navbar-brand img {
+  max-height: 100px; /* Allow logo to take up more space */
+  margin-top: -35px; /* Adjust this value to move the logo up/down */
+}
+
+/* Desktop logo adjustment */
+.navbar-brand.hidden-xs .navbar-brand img {
+  max-height: 100px; /* Allow logo to take up more space */
+  margin-top: -47px; /* Adjust this value to move the logo up/down */
+}
+
+/* Adjust navigation links vertical alignment */
+.navbar-custom .nav > li > a {
+  padding-top: 10px; /* Adjust vertical padding of links */
+  padding-bottom: 10px; /* Adjust vertical padding of links */
+  line-height: 30px; /* Ensure text is vertically centered within its new padding */
+}
+
+/* Adjustments for when the navbar shrinks on scroll (if applicable) */
+/* The 'navbar-shrink' class is typically added by JavaScript when scrolling down */
+.navbar-custom.navbar-shrink {
+  padding-top: 15px; /* Smaller padding when shrunk */
+  padding-bottom: 15px;
+}
+
+.navbar-custom.navbar-shrink .navbar-brand-center.visible-xs .navbar-brand img {
+  margin-top: -30px; /* Revert to original or slightly adjusted for shrunk state */
+  max-height: 90px;
+}
+
+.navbar-custom.navbar-shrink .navbar-brand.hidden-xs .navbar-brand img {
+  margin-top: -42px; /* Revert to original or slightly adjusted for shrunk state */
+  max-height: 90px;
+}
+
+.navbar-custom.navbar-shrink .nav > li > a {
+  padding-top: 8px; /* Smaller padding for links when shrunk */
+  padding-bottom: 8px;
+  line-height: 24px; /* Adjust line-height for shrunk state */
+}

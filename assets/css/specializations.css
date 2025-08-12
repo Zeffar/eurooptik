@@ -1,0 +1,94 @@
+#specialitati {
+  padding: 80px 0;
+  overflow: hidden; /* Prevents horizontal scroll on small screens if there's any overflow */
+}
+
+.specialitati-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows stacking on smaller screens */
+  align-items: center; /* Vertically aligns text and image blocks */
+}
+
+/* Left column for text content */
+.specialitati-text {
+  width: 50%;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+/* Right column for images */
+.specialitati-images {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.specialitati-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  gap: 10px; /* Adds a small gap between buttons */
+}
+
+.specialitati-buttons button {
+  flex-grow: 1; /* Allows buttons to share the space equally */
+  padding: 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.specialitati-buttons button.active {
+  background-color: #39a58f;
+  color: white;
+  border-color: #39a58f;
+}
+
+.specialitati-content p {
+  display: none; /* Hide all content paragraphs by default */
+  font-size: 16px;
+  line-height: 1.7;
+  color: #666;
+}
+
+.specialitati-content p.active {
+  display: block; /* Show only the active one */
+}
+
+/* Container for the two images */
+.specialitati-image-wrapper {
+    display: flex;
+    gap: 20px; /* Creates space between the two images */
+}
+
+.specialitati-image-wrapper img {
+  width: 50%; /* Each image takes half of the wrapper's width */
+  height: 450px; /* Fixed height for a uniform look */
+  object-fit: cover; /* Ensures images cover the area without distortion */
+  display: block;
+  border-radius: 8px;
+}
+
+/* Responsive Styles for mobile */
+@media (max-width: 768px) {
+  .specialitati-container {
+    flex-direction: column; /* Stack the text and image columns */
+  }
+
+  .specialitati-text,
+  .specialitati-images {
+    width: 100%; /* Both columns take full width */
+  }
+
+  .specialitati-text {
+    padding-right: 0; /* Remove padding on mobile */
+    margin-bottom: 30px; /* Add space between stacked text and images */
+  }
+  
+  .specialitati-image-wrapper img {
+    height: 300px; /* Adjust image height for smaller screens */
+  }
+}
