@@ -1,8 +1,3 @@
-console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55');
-
-/* ---------------------------------------------- /*
- * Preloader
- /* ---------------------------------------------- */
 (function () {
     $(window).on('load', function () {
         $('.loader').fadeOut();
@@ -10,20 +5,10 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
     });
 
     $(document).ready(function () {
-
-        /* ---------------------------------------------- /*
-         * WOW Animation When You Scroll
-         /* ---------------------------------------------- */
-
         wow = new WOW({
             mobile: false
         });
         wow.init();
-
-
-        /* ---------------------------------------------- /*
-         * Scroll top
-         /* ---------------------------------------------- */
 
         $(window).scroll(function () {
             if ($(this).scrollTop() > 100) {
@@ -39,34 +24,12 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
         });
 
         /* ---------------------------------------------- /*
-         * Location Pricing System
-         /* ---------------------------------------------- */
-
-        $('.location-btn').click(function () {
-            var location = $(this).data('location');
-
-            // Change active state of buttons
-            $('.location-btn').removeClass('btn-d').addClass('btn-border-d');
-            $(this).removeClass('btn-border-d').addClass('btn-d');
-
-            // Hide the prompt when a location is selected
-            $('.location-prompt').fadeOut();
-
-            // Update all price values based on the selected location
-            $('.price-value').each(function () {
-                var price = $(this).data(location);
-                $(this).text(price);
-            });
-        });
-
-        /* ---------------------------------------------- /*
          * Initialization General Scripts for all pages
          /* ---------------------------------------------- */
 
         var homeSection = $('.home-section'),
             navbar = $('.navbar-custom'),
             navHeight = navbar.height(),
-            worksgrid = $('#works-grid'),
             width = Math.max($(window).width(), window.innerWidth),
             mobileTest = false;
 
@@ -90,21 +53,6 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
             navbarAnimation(navbar, homeSection, navHeight);
         });
 
-        /* ---------------------------------------------- /*
-         * Set sections backgrounds
-         /* ---------------------------------------------- */
-
-        var module = $('.home-section, .module, .module-small, .side-image');
-        module.each(function (i) {
-            if ($(this).attr('data-background')) {
-                $(this).css('background-image', 'url(' + $(this).attr('data-background') + ')');
-            }
-        });
-
-        /* ---------------------------------------------- /*
-         * Home section height
-         /* ---------------------------------------------- */
-
         function buildHomeSection(homeSection) {
             if (homeSection.length > 0) {
                 if (homeSection.hasClass('home-full-height')) {
@@ -114,7 +62,6 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
                 }
             }
         }
-
 
         /* ---------------------------------------------- /*
          * Home section effects
@@ -157,7 +104,6 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
             });
         }
 
-
         /* ---------------------------------------------- /*
          * Rotate
          /* ---------------------------------------------- */
@@ -167,7 +113,6 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
             separator: "|",
             speed: 3000
         });
-
 
         /* ---------------------------------------------- /*
          * Transparent navbar animation
@@ -253,192 +198,6 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
             }
         });
 
-
-        /* ---------------------------------------------- /*
-         * Video popup, Gallery
-         /* ---------------------------------------------- */
-
-        $('.video-pop-up').magnificPopup({
-            type: 'iframe'
-        });
-
-        $(".gallery-item").magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            gallery: {
-                enabled: true,
-                navigateByImgClick: true,
-                preload: [0, 1]
-            },
-            image: {
-                titleSrc: 'title',
-                tError: 'The image could not be loaded.'
-            }
-        });
-
-        /* ---------------------------------------------- /*
-         * Portfolio
-         /* ---------------------------------------------- */
-
-        var worksgrid = $('#works-grid'),
-            worksgrid_copy = $('#works-grid-copy'), // Added for the new grid
-            worksgrid_mode;
-
-        if (worksgrid.hasClass('works-grid-masonry')) {
-            worksgrid_mode = 'masonry';
-        } else {
-            worksgrid_mode = 'fitRows';
-        }
-
-        worksgrid.imagesLoaded(function () {
-            worksgrid.isotope({
-                layoutMode: worksgrid_mode,
-                itemSelector: '.work-item'
-            });
-        });
-
-        // Initialize Isotope for the copied grid
-        if (worksgrid_copy.length) {
-            worksgrid_copy.imagesLoaded(function () {
-                worksgrid_copy.isotope({
-                    layoutMode: worksgrid_mode, // Assuming same layout mode
-                    itemSelector: '.work-item'
-                });
-            });
-        }
-
-        $('#filters a').click(function () {
-            $('#filters .current').removeClass('current');
-            $(this).addClass('current');
-            var selector = $(this).attr('data-filter');
-
-            worksgrid.isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false
-                }
-            });
-
-            return false;
-        });
-
-        // Event listeners for the copied filters
-        $('#filters-copy a').click(function (e) {
-            e.preventDefault(); // Prevent default anchor behavior
-            var $this = $(this);
-            var selector = $this.attr('data-filter');
-            var $arrow = $this.find('.arrow-indicator'); // Get the arrow indicator
-
-            if ($this.hasClass('current')) {
-                // Clicked on the currently active button, toggle the grid display
-                worksgrid_copy.slideToggle(300, function () {
-                    // Toggle arrow direction based on grid visibility
-                    if (worksgrid_copy.is(':visible')) {
-                        $this.addClass('grid-open');
-                    } else {
-                        $this.removeClass('grid-open');
-                    }
-                });
-            } else {
-                // Clicked on a new filter button or the first click
-                $('#filters-copy .current').removeClass('current').removeClass('grid-open'); // Also remove grid-open from previously active
-                $this.addClass('current').addClass('grid-open'); // Add grid-open to the new active button
-
-                // Ensure the grid is visible, then filter
-                worksgrid_copy.slideDown(300, function () { // 300ms animation
-                    worksgrid_copy.isotope({
-                        filter: selector,
-                        animationOptions: {
-                            duration: 750,
-                            easing: 'linear',
-                            queue: false
-                        }
-                    });
-                    worksgrid_copy.isotope('layout'); // Force a re-layout after filtering
-                });
-            }
-        });
-
-        // Initialize Magnific Popup for portfolio items
-        $('.work-item').magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            gallery: {
-                enabled: false
-            },
-            image: {
-                titleSrc: function (item) {
-                    return item.el.attr('data-caption');
-                }
-            }
-        });
-
-        /* ---------------------------------------------- /*
-         * Set minimum date for appointment form
-         /* ---------------------------------------------- */
-
-        // Set min date on the date picker to today
-        if ($("#date").length) {
-            var today = new Date();
-            var dd = String(today.getDate()).padStart(2, '0');
-            var mm = String(today.getMonth() + 1).padStart(2, '0');
-            var yyyy = today.getFullYear();
-            today = yyyy + '-' + mm + '-' + dd;
-            $("#date").attr("min", today);
-        }
-
-        /* ---------------------------------------------- /*
-         * Appointment Form Processing
-         /* ---------------------------------------------- */
-
-        $("#appointmentForm").submit(function (e) {
-            e.preventDefault();
-            var $ = jQuery;
-
-            var postData = $(this).serializeArray(),
-                formURL = $(this).attr("action"),
-                $formResponse = $('#appointmentFormResponse'),
-                $submitButton = $("#appointmentSubmit"),
-                submitText = $submitButton.text();
-
-            $submitButton.text("Se trimite...");
-
-            // Simulate AJAX call for demo purposes
-            setTimeout(function () {
-                $formResponse.html('<div class="alert alert-success">Programarea dumneavoastră a fost înregistrată cu succes! Veți primi un email de confirmare în curând.</div>');
-                $submitButton.text(submitText);
-                $('#appointmentForm')[0].reset();
-            }, 1500);
-
-            return false;
-        });
-
-        // Clear error state when field is focused
-        $('#appointmentForm').find('input, select, textarea').on('focus', function () {
-            $(this).removeClass('input-error');
-        });
-
-        /* ---------------------------------------------- /*
-         * Funfact Count-up
-         /* ---------------------------------------------- */
-
-        $('.count-item').each(function (i) {
-            $(this).appear(function () {
-                var number = $(this).find('.count-to').data('countto');
-                $(this).find('.count-to').countTo({ from: 0, to: number, speed: 1200, refreshInterval: 30 });
-            });
-        });
-
-        /* ---------------------------------------------- /*
-         * Youtube video background
-         /* ---------------------------------------------- */
-
-        $(function () {
-            $(".video-player").mb_YTPlayer();
-        });
-
         /* ---------------------------------------------- /*
          * Scroll Animation
          /* ---------------------------------------------- */
@@ -450,93 +209,5 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
             }, 1000);
             e.preventDefault();
         });
-
-        /*===============================================================
-         Working Contact Form
-         ================================================================*/
-
-        $("#contactForm").submit(function (e) {
-            e.preventDefault();
-            var $ = jQuery;
-
-            var postData = $(this).serializeArray(),
-                formURL = $(this).attr("action"),
-                $cfResponse = $('#contactFormResponse'),
-                $cfsubmit = $("#cfsubmit"),
-                cfsubmitText = $cfsubmit.text();
-
-            $cfsubmit.text("Se trimite...");
-
-            // Simulate AJAX call for demo purposes
-            setTimeout(function () {
-                $cfResponse.html('<div class="alert alert-success">Mesajul dumneavoastră a fost trimis cu succes! Vă vom contacta în curând.</div>');
-                $cfsubmit.text(cfsubmitText);
-                $('#contactForm')[0].reset();
-            }, 1500);
-
-            return false;
-        });
-
-        /* ---------------------------------------------- /*
-         * Address Cards Navigation
-         /* ---------------------------------------------- */
-        const initAddressCardsNav = function () {
-            const cardContainer = document.getElementById('addressCards');
-            const prevBtn = document.querySelector('.addresses-wrapper .prev-arrow');
-            const nextBtn = document.querySelector('.addresses-wrapper .next-arrow');
-
-            if (!cardContainer || !prevBtn || !nextBtn) {
-                console.error('Missing required elements for address cards navigation');
-                return;
-            }
-
-            const scrollCard = () => {
-                if (!cardContainer.firstElementChild) return 0;
-                const cardWidth = cardContainer.firstElementChild.offsetWidth;
-                return cardWidth + 20; // Add gap
-            };
-
-            prevBtn.addEventListener('click', function () {
-                const scrollAmount = -scrollCard();
-                cardContainer.scrollBy({
-                    left: scrollAmount,
-                    behavior: 'smooth'
-                });
-            });
-
-            nextBtn.addEventListener('click', function () {
-                const scrollAmount = scrollCard();
-                cardContainer.scrollBy({
-                    left: scrollAmount,
-                    behavior: 'smooth'
-                });
-            });
-
-            // Update arrow states
-            const updateArrows = () => {
-                const isAtStart = cardContainer.scrollLeft <= 0;
-                const isAtEnd = cardContainer.scrollLeft >= (cardContainer.scrollWidth - cardContainer.clientWidth - 1);
-
-                prevBtn.style.opacity = isAtStart ? '0.5' : '1';
-                prevBtn.style.cursor = isAtStart ? 'not-allowed' : 'pointer';
-
-                nextBtn.style.opacity = isAtEnd ? '0.5' : '1';
-                nextBtn.style.cursor = isAtEnd ? 'not-allowed' : 'pointer';
-            };
-
-            // Listen for scroll events to update arrows
-            cardContainer.addEventListener('scroll', updateArrows);
-
-            // Initial arrow state
-            updateArrows();
-
-            // Also update arrows when window resizes
-            window.addEventListener('resize', updateArrows);
-        };
-
-        // Initialize address cards navigation
-        initAddressCardsNav();
     });
 })(jQuery);
-
-

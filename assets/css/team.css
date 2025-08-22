@@ -192,7 +192,7 @@
 .team-member-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 @media (max-width: 991px) {
@@ -221,4 +221,20 @@
         width: 220px; 
         height: 220px;
     }
+}
+
+.team-member.doctor:hover .team-member-photo {
+    box-shadow: 0 10px 30px rgba(209, 55, 117, 0.3);
+}
+
+.team-member.asistenta-medicala:hover .team-member-photo {
+    box-shadow: 0 10px 30px rgba(55, 128, 209, 0.3);
+}
+
+.team-member.consilier:hover .team-member-photo {
+    box-shadow: 0 10px 30px rgba(55, 209, 132, 0.3);
+}
+
+.team-member.infirmiera:hover .team-member-photo {
+    box-shadow: 0 10px 30px rgba(209, 145, 55, 0.3);
 }

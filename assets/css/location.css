@@ -1,160 +1,129 @@
-/*==============================================================
-  [12] Location & Contact Section (Carousel)
-==============================================================*/
-
 #adresses {
-    background-color: #f8f8f8; /* Light background for the section */
-    overflow-x: hidden; /* Prevent horizontal scrollbar on the page */
+    background-color: white; 
+    overflow-x: hidden; 
 }
-
-#adresses .module-title { /* Targeting the title within this section */
-    font-size: 28px;
-    margin-bottom: 30px; /* Increased to create more space below the title */
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #333;
-}
-
-#adresses .module-subtitle { /* Added subtitle styling */
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 25px; /* Space before the carousel */
-}
-
-
-/* --- Carousel Structure (Default: Mobile First - One card at a time) --- */
 
 .carousel-viewport {
     width: 100%;
-    /* max-width: 1200px;  Removed this as it's now handled by media query */
     margin: 0 auto 30px auto;
-    overflow: hidden; /* This hides the parts of the container that are off-screen */
-    height: auto; /* Let height adapt to content */
+    overflow: hidden; 
+    height: auto; 
 }
 
 .location-cards-container {
     display: flex;
-    /* The transform property will be manipulated by carousel.js */
     transition: transform 0.5s ease-in-out; 
-    flex-wrap: nowrap; /* Crucial: prevent wrapping on small screens, ensuring carousel works */
+    flex-wrap: nowrap;
 }
 
-/* --- Location Card Styling --- */
-
 .location-card {
-    /* Defines how much space a single card takes */
     flex-shrink: 0;
-    flex-basis: 100%; /* Mobile first: one card fits the screen */
+    flex-basis: 100%; 
     max-width: 100%;
     
     box-sizing: border-box;
-    padding: 0 15px; /* Spacing between cards in carousel */
+    padding: 0 15px; 
     text-decoration: none;
-    color: #333; /* Default text color for the card content */
+    color: #333; 
     
-    display: flex; /* Use flexbox for vertical stacking */
-    flex-direction: column; /* Stack children vertically */
+    display: flex; 
+    flex-direction: column; 
     
     border-radius: 8px;
-    overflow: hidden; /* Ensures content respects the border-radius */
-    height: auto; /* Allow card height to adjust */
+    overflow: hidden; 
+    height: auto; 
     position: relative;
-    background-color: #fff; /* White background for the card */
-    border: 1px solid #e0e0e0; /* Subtle border */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Soft shadow */
+    background-color: #fff; 
+    border: 1px solid #e0e0e0; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .location-card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Enhanced shadow on hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
 }
 
-/* --- Title Box Styling (Removed box, applied to h5) --- */
 .location-card-header {
-    background-color: transparent; /* Make it transparent */
-    color: inherit; /* Inherit text color from parent or default */
-    padding: 0; /* Remove padding from the div */
+    background-color: transparent;
+    color: inherit; 
+    padding: 0; 
     text-align: center;
     flex-shrink: 0;
-    border-top-left-radius: 0; /* Remove radius */
-    border-top-right-radius: 0; /* Remove radius */
+    border-top-left-radius: 0; 
+    border-top-right-radius: 0; 
 }
 
 .location-card-header h5 {
     font-size: 24px;
     font-weight: 700;
     margin: 0;
-    color: #1e3932; /* Set a specific dark color for the text */
-    padding: 18px 20px; /* Add padding to the h5 itself */
+    color: #1e3932; 
+    padding: 18px 20px;
 }
-/* --- End Title Box Styling --- */
-
 
 .location-card-image {
-    height: 0; /* Collapse height to use padding-bottom for aspect ratio */
-    padding-bottom: 75%; /* 4:3 aspect ratio (3/4 = 0.75) */
+    height: 0; 
+    padding-bottom: 75%;
     overflow: hidden;
-    display: block; /* Ensure it behaves like a block for padding-bottom */
-    position: relative; /* Needed for absolute positioning of img */
+    display: block; 
+    position: relative;
     width: 100%;
-    background-color: #f0f0f0; /* Placeholder background */
+    background-color: #f0f0f0; 
 }
 
 .location-card-image img {
-    position: absolute; /* Position img absolutely within its parent */
+    position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover the area, maintaining aspect ratio */
-    display: block; /* Remove any extra space below the image */
+    object-fit: cover;
+    display: block; 
 }
 
 .location-card-details {
-    display: block; /* Ensure details are visible on all screens */
+    display: block;
 
     background-color: #fff;
     padding: 20px;
     text-align: left;
-    flex-shrink: 0; /* Prevent details section from shrinking */
+    flex-shrink: 0;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
 
 .location-card-details p {
-    margin: 6px 0; /* Adjust spacing between paragraphs */
+    margin: 6px 0; 
     font-size: 16px;
-    color: #555; /* Slightly darker text for readability */
+    color: #555; 
     font-weight: normal;
 }
 
 .location-card-details .contact-info i.fa,
 .location-card-details .location-address i.fas {
     margin-right: 10px;
-    min-width: 20px; /* Ensure consistent width for icons to prevent overlap */
+    min-width: 20px; 
     text-align: center;
-    color: #d13775; /* Magenta color for icons */
-    display: inline-block; /* Treat as block to apply min-width, but keep inline flow */
+    color: #d13775; 
+    display: inline-block;
 }
-
-/* --- Carousel Navigation (Default: Show on small screens) --- */
 
 .carousel-nav {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Increased gap for better spacing */
-    margin-top: 40px; /* Space below the carousel cards */
+    gap: 20px; 
+    margin-top: 40px; 
 }
 
 .carousel-btn {
-    background: #d13775; /* Magenta color */
+    background: #d13775; 
     color: #fff;
     border: none;
     border-radius: 50%;
-    width: 50px; /* Slightly larger buttons */
+    width: 50px; 
     height: 50px;
-    font-size: 18px; /* Larger icon */
+    font-size: 18px; 
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
@@ -164,7 +133,7 @@
 }
 
 .carousel-btn:hover {
-    background: #b42c61; /* Darker magenta on hover */
+    background: #b42c61; 
     transform: translateY(-2px);
 }
 
@@ -175,10 +144,7 @@
     box-shadow: none;
 }
 
-/* --- Responsive Breakpoints --- */
-
-/* Adjustments for smaller screens (mobile/tablet) - keep carousel, 1 card per view */
-@media (max-width: 991px) { /* Up to desktop breakpoint */
+@media (max-width: 991px) { 
     #adresses .module-title {
         font-size: 24px;
     }
@@ -192,33 +158,31 @@
     }
 }
 
-
-/* Media query for large screens (e.g., desktop - show all cards in one row, taking full width) */
 @media (min-width: 992px) {
     .carousel-viewport {
-        overflow: visible; /* Show all cards */
-        max-width: none; /* Allow container to expand horizontally */
+        overflow: visible;
+        max-width: none; 
         margin-bottom: 0;
-        height: auto; /* Allow viewport to expand vertically to fit content */
-        padding: 0 15px; /* Add horizontal padding to align with content */
+        height: auto; 
+        padding: 0 15px;
     }
 
     .location-cards-container {
         display: flex;
-        flex-wrap: nowrap; /* Crucial: prevent wrapping */
-        justify-content: space-between; /* Distribute items evenly to take full width */
-        gap: 30px; /* Gap between cards */
-        transform: none !important; /* Override JS transform */
-        transition: none; /* Disable transition */
+        flex-wrap: nowrap; 
+        justify-content: space-between; 
+        gap: 30px; 
+        transform: none !important; 
+        transition: none; 
     }
 
     .location-card {
-        flex-basis: 0; /* Allow cards to grow from 0 */
-        flex-grow: 1; /* Make cards grow equally to fill space */
-        min-width: 250px; /* Increased: Allow cards to be wider on large screens */
-        height: auto; /* Allow height to adjust based on content */
-        margin: 0; /* Remove any previous margins */
-        padding: 0; /* Remove any previous padding */
+        flex-basis: 0; 
+        flex-grow: 1; 
+        min-width: 250px; 
+        height: auto;
+        margin: 0;
+        padding: 0; 
         box-sizing: border-box;
     }
     
@@ -242,6 +206,6 @@
     }
 
     .carousel-nav {
-        display: none; /* Hide navigation buttons on large screens */
+        display: none; 
     }
 }

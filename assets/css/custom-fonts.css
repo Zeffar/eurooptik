@@ -4,23 +4,15 @@ body {
   font-weight: 400; /* Regular default font weight for general text */
 }
 
-/* Titles: bold and capitalized */
 .module-title,
 .section-title,
 .specialization-card .card-title,
 .specialization-article-container .article-title,
-/* Targeting the header of pricing cards */
 .pricing-card > div > div:first-child,
 .location-card-header h5,
 #programare-section h2,
 .footer-message h2,
 .footer-location-name,
-.service-card-title {
-  font-weight: 700; /* Bold */
-  text-transform: uppercase;
-}
-
-/* Instructions/Subtitles: regular */
 .module-subtitle,
 .section-subtitle {
   font-weight: 400; /* Regular */

@@ -1,8 +1,6 @@
-/* assets/css/new-specializations.css */
-
 #new-specializations {
   padding: 80px 0;
-  background-color: #f5f3ed; /* Light background for the section */
+  background-color: white;
 }
 
 #new-specializations .module-title {
@@ -10,7 +8,6 @@
   margin-bottom: 40px;
 }
 
-/* Main Category Buttons */
 .specialization-category-buttons {
   display: flex;
   justify-content: center;
@@ -19,16 +16,16 @@
 }
 
 .specialization-category-buttons .category-btn {
-  background-color: #333; /* Black background */
+  background-color: #333; 
   color: #fff;
   border: 2px solid #333;
   padding: 12px 30px;
   font-size: 1.1em;
   font-weight: 600;
-  border-radius: 50px; /* Rounded corners */
+  border-radius: 50px; 
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  flex: 0 1 calc(33.33% - 20px); /* Roughly 1/3 width, accounting for gap */
-  max-width: 300px; /* Max width to prevent them from getting too wide on large screens */
+  flex: 0 1 calc(33.33% - 20px); 
+  max-width: 300px;
   text-align: center;
 }
 
@@ -38,38 +35,34 @@
 }
 
 .specialization-category-buttons .category-btn.active {
-  background-color: #d13775; /* Pink for active */
+  background-color: #d13775;
   border-color: #d13775;
   color: white;
 }
 
-/* Carousel Wrapper */
 .specialization-carousel-wrapper {
   position: relative;
-  overflow: hidden; /* Hide cards outside the view */
-  padding: 0 40px; /* Space for nav buttons */
+  overflow: hidden; 
+  padding: 0 40px; 
   margin-bottom: 50px;
 }
 
 .specialization-carousel-container {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  gap: 20px; /* Gap between cards */
-  /* --- IMPORTANT: Removed overflow-x and scroll-snap properties here --- */
+  gap: 20px; 
 }
 
-/* Individual Specialization Card */
 .specialization-card {
-  /* Calculate min-width for 3 cards visible, accounting for 2 gaps */
   min-width: calc((100% - 2 * 20px) / 3);
-  flex: 0 0 auto; /* Do not grow or shrink */
+  flex: 0 0 auto; 
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  display: flex; /* Use flexbox for image and title alignment */
+  display: flex; 
   flex-direction: column;
 }
 
@@ -79,15 +72,15 @@
 }
 
 .specialization-card.active {
-  border: 3px solid #d13775; /* Highlight active card */
+  border: 3px solid #d13775; 
 }
 
 .specialization-card .card-image-container {
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio (9/16 = 0.5625) */
+  padding-bottom: 56.25%; 
   position: relative;
   overflow: hidden;
-  background-color: #eee; /* Placeholder background */
+  background-color: #eee; 
 }
 
 .specialization-card img {
@@ -108,7 +101,6 @@
   margin: 0;
 }
 
-/* Carousel Navigation Buttons */
 .carousel-nav-btn {
   position: absolute;
   top: 50%;
@@ -145,7 +137,6 @@
   cursor: not-allowed;
 }
 
-/* Specialization Article Content */
 .specialization-article-container {
   background-color: #fff;
   padding: 40px;
@@ -163,21 +154,18 @@
 .article-content-wrapper {
   display: flex;
   gap: 30px;
-  /* --- CHANGE HERE: Vertically center content on large screens --- */
-  align-items: center; /* Align content to the center vertically */
+  align-items: center;
 }
 
-/* Desktop styles for article content (Large Screens) */
-/* Image on left (2/3 width) */
 .article-image {
-  flex: 0 0 calc(66.66% - 15px); /* 2/3 of the available space, accounting for half the gap */
+  flex: 0 0 calc(66.66% - 15px);
   max-width: calc(66.66% - 15px);
   position: relative;
-  padding-bottom: 56.25%; /* Maintain 16:9 Aspect Ratio for the image container */
-  background-color: #eee; /* Placeholder background */
+  padding-bottom: 56.25%;
+  background-color: #eee; 
   border-radius: 8px;
   overflow: hidden;
-  order: 1; /* Ensures image comes first (left) in flex order */
+  order: 1; 
 }
 
 .article-image img {
@@ -190,36 +178,84 @@
   border-radius: 8px;
 }
 
-/* Text on right (1/3 width) */
 .article-text {
-  flex: 0 0 calc(33.33% - 15px); /* 1/3 of the available space, accounting for half the gap */
+  flex: 0 0 calc(33.33% - 15px); 
   max-width: calc(33.33% - 15px);
   font-size: 1.1em;
   line-height: 1.8;
   color: #555;
-  order: 2; /* Ensures text comes second (right) in flex order */
+  order: 2; 
 }
 
-/* Responsive adjustments */
-@media (max-width: 991px) { /* Tablet and smaller */
-  /* ... (carousel adjustments remain the same) ... */
+.article-testimonial {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
 
+.article-testimonial .testimonial-content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.article-testimonial .testimonial-author-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.article-testimonial .testimonial-text-content {
+  flex: 1;
+}
+
+.article-testimonial .testimonial-heading {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.article-testimonial .testimonial-scroll-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.article-testimonial .testimonial-quote {
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  font-size: 15px;
+  color: #555;
+  border-left: none;
+}
+
+.article-testimonial .blog-link {
+  display: block;
+  font-weight: 500;
+  color: #007bff;
+  text-decoration: underline;
+}
+
+@media (max-width: 991px) { 
   .article-content-wrapper {
-    flex-direction: column; /* Stack image and text vertically */
+    flex-direction: column; 
   }
   .article-text,
   .article-image {
-    flex: none; /* Remove flex sizing */
-    width: 100%; /* Take full width */
+    flex: none; 
+    width: 100%; 
     max-width: 100%;
-    order: unset; /* Remove explicit order, revert to HTML document order */
+    order: unset;
   }
   .article-image {
-    padding-bottom: 56.25%; /* Maintain 16:9 for full width image on mobile */
+    padding-bottom: 56.25%; 
   }
 }
 
-@media (max-width: 767px) { /* Mobile */
+@media (max-width: 767px) {
   .specialization-category-buttons {
     flex-direction: row;
     justify-content: center;
@@ -229,25 +265,22 @@
   .specialization-category-buttons .category-btn {
     flex: 0 0 calc(33.33% - 14px);
     max-width: 150px;
-    /* --- NEW/MODIFIED RULE HERE --- */
-    white-space: normal; /* Allows text to wrap onto multiple lines */
-    min-height: 60px; /* Ensure enough height for two lines of text (adjust as needed) */
-    display: flex; /* Use flexbox to vertically center the wrapped text */
-    align-items: center; /* Vertically center the text */
-    justify-content: center; /* Horizontally center the text */
+    white-space: normal;
+    min-height: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .specialization-card {
-    min-width: 100%; /* 1 card per row */
+    min-width: 100%;
   }
   .specialization-carousel-wrapper {
-    padding: 0; /* Remove padding, buttons will be managed by JS */
-    /* No need for flex-direction: column here, JS handles moving buttons */
+    padding: 0;
   }
   .specialization-carousel-container {
-    width: 100%; /* Take full width of wrapper */
+    width: 100%; 
   }
-  /* Wrapper for mobile nav buttons, created by JS */
   .specialization-carousel-nav-mobile {
     display: flex;
     justify-content: center;
@@ -255,3 +288,4 @@
     margin-top: 20px;
   }
 }
+

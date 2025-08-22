@@ -1,38 +1,35 @@
-/* Sponsors Section */
 #sponsors {
-    padding-top: 60px; /* Adjust as needed */
-    padding-bottom: 60px; /* Adjust as needed */
-    background-color: #f5f3ed; /* Light background for contrast */
+    padding-top: 60px;
+    padding-bottom: 60px; 
+    background-color: white; 
 }
 
 #sponsors .module-title {
     margin-bottom: 40px;
-    color: #333; /* Darker color for title */
+    color: #333; 
 }
 
-/* Carousel Specific Styles for Sponsors */
 .sponsors-carousel-viewport {
-    width: 75%; /* 9/12 of the screen width */
-    max-width: 877.5px; /* 75% of 1170px (common container width) */
-    margin: 0 auto; /* Center the carousel */
+    width: 75%; 
+    max-width: 877.5px; 
+    margin: 0 auto; 
     overflow: hidden;
-    position: relative; /* For the internal image positioning */
-    /* No padding here, as buttons are now external */
+    position: relative;
 }
 
 .sponsors-cards-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    flex-wrap: nowrap; /* Ensure cards don't wrap */
-    width: 100%; /* Takes full width of the viewport */
+    flex-wrap: nowrap; 
+    width: 100%; 
 }
 
 .sponsor-card {
-    flex: 0 0 auto; /* Do not grow, do not shrink, base on content */
-    width: 100%; /* Each card takes full width of the visible area (one image at a time) */
-    padding: 15px; /* Spacing around the image */
+    flex: 0 0 auto; 
+    width: 100%; 
+    padding: 15px; 
     box-sizing: border-box;
-    display: flex; /* To center the image within the card */
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -40,11 +37,11 @@
 .sponsor-image-wrapper {
     position: relative;
     width: 100%;
-    padding-top: 75%; /* 4:3 aspect ratio (height is 75% of width) */
+    padding-top: 75%; 
     overflow: hidden;
-    background-color: #fff; /* White background for logos */
-    border-radius: 8px; /* Slightly rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
 }
 
 .sponsor-image-wrapper img {
@@ -53,27 +50,17 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ensures the whole image is visible */
-    padding: 10px; /* Add some padding inside the wrapper so logo doesn't touch edges */
+    object-fit: contain; 
+    padding: 10px; 
     box-sizing: border-box;
 }
 
-/* Apply location's carousel-nav styles to sponsors' nav */
-/* The .carousel-nav class is already defined in location.css (or main style.css)
-   and provides the default flex, justify-content, gap, and margin-top.
-   We just need to ensure it's always visible. */
 .sponsors-carousel-nav {
-    /* Override any potential 'display: none' from general .carousel-nav on large screens */
-    display: flex !important; /* Important to ensure it overrides if a more general rule exists */
-    /* Other styles like justify-content, margin-top, gap will be inherited from .carousel-nav */
+    display: flex !important; 
 }
 
-/* No specific responsive adjustments needed for buttons here,
-   as .carousel-btn's responsive rules from location.css will apply automatically. */
-
-/* Responsive adjustment for the viewport width on smaller screens */
 @media (max-width: 767px) {
     .sponsors-carousel-viewport {
-        width: 95%; /* Adjust width for mobile, leave some margin */
+        width: 95%; 
     }
 }

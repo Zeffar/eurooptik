@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Se încarcă articolul...</title> 
+
+    <link href="../assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="../assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link href="../assets/css/blog.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/custom-fonts.css" rel="stylesheet">
+
+    <style>
+        body { background-color: #fcfcfc; }
+        #single-article-section { padding-top: 100px; padding-bottom: 100px; }
+        .article-content-wrapper { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 8px;
+        }
+        #article-title {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        #article-author {
+            font-size: 16px;
+            font-style: italic;
+            color: #777;
+            margin-bottom: 30px;
+        }
+        #article-content p, #article-content li {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 17px;
+            line-height: 1.8;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="single-article-section">
+            <div id="loader" style="text-align: center; font-size: 20px;">Se încarcă articolul...</div>
+            
+            <div id="article-container" class="article-content-wrapper" style="display: none;">
+                <h1 id="article-title"></h1>
+                <p id="article-author"></p>
+                <div id="article-content"></div>
+            </div>
+
+            <div id="article-not-found" style="text-align: center; display: none;">
+                <h2>404 - Articolul nu a fost găsit</h2>
+                <p>Ne pare rău, articolul pe care îl cauți nu există sau a fost mutat.</p>
+                <a href="../index.html#blog-section">Înapoi la toate articolele</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/contentful@latest/dist/contentful.browser.min.js"></script>
+    <script type="module" src="../assets/js/contentful-service.js"></script>
+    <script type="module" src="../assets/js/article-page.js"></script> 
+</body>
+</html>

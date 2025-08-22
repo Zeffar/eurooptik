@@ -6,34 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Eurooptik</title>
-  <!--  
-    Stylesheets
-    =============================================
-    
-    -->
-  <!-- Default stylesheets-->
   <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-
-  <!-- Template specific stylesheets-->
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
   <link href="assets/lib/animate.css/animate.css" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link href="assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
   <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
   <link href="assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
   <link href="assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
 
-  <!-- Main stylesheet and color file-->
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/team.css" rel="stylesheet">
   <link href="assets/css/contact.css" rel="stylesheet">
-  <link href="assets/css/team-responsive.css" rel="stylesheet">
-  <link href="assets/css/team-enhancements.css" rel="stylesheet">
   <link href="assets/css/footer.css" rel="stylesheet">
   <link href="assets/css/contact.css" rel="stylesheet">
   <link href="assets/css/prices.css" rel="stylesheet">
@@ -43,7 +33,8 @@
   <link href="assets/css/location.css" rel="stylesheet"> 
   <link href="assets/css/sponsors.css" rel="stylesheet">
   <link href="assets/css/custom-fonts.css" rel="stylesheet">
-  <!-- CONTENTFUL SDK -->
+  <link href="assets/css/blog.css" rel="stylesheet">
+
   <script src="https://unpkg.com/contentful@latest/dist/contentful.browser.min.js"></script>
 </head>
 
@@ -62,7 +53,6 @@
             <span class="icon-bar"></span>
           </button>
 
-          <!-- Logo positioning: centered on mobile, left on larger screens -->
           <div class="navbar-brand-center visible-xs">
             <a class="navbar-brand" href="#totop">
               <img src="assets/images/logo-full.png" alt="Eurooptik" style="max-height: 90px; margin-top: -30px;">
@@ -79,18 +69,20 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#totop" id="navbar-button">Acasa
               </a></li>
-            <li><a class="section-scroll" href="#services" id="navbar-button">Servicii</a>
+            <li><a class="section-scroll" href="#our-services-section" id="navbar-button">Servicii</a>
             </li>
             <li><a class="section-scroll" href="#echipa-noastra" id="navbar-button">Echipa</a>
             </li>
-            <li><a class="section-scroll" href="#pricing" id="navbar-button">Preturi</a>
+            <li><a class="section-scroll" href="#pricing" id="navbar-button">Tarife</a>
             </li>
             <li><a class="section-scroll" href="#testimoniale" id="navbar-button">Testimoniale</a>
             </li>
+            <li><a class="section-scroll" href="#blog-section" id="navbar-button">Blog</a>
+            </li>
             <li><a class="section-scroll" href="#adresses" id="navbar-button">Contact</a>
             </li>
-            <!-- <li><a class="section-scroll" id="navbar-button-programare"
-                href="https://eurooptik.ro.programarionline.sophtha.com/">Programare</a></li> -->
+            <li><a class="section-scroll" href="#sponsors" id="navbar-button">Parteneri</a>
+            </li>
             <li>
               <a class="section-scroll" class="btn-programare" id="navbar-button-programare" href="#"
                 onclick="showProgramareSection(); return false;">Programare</a>
@@ -120,7 +112,6 @@
 
     <div class="main">
 
-      <!-- NEW SPECIALIZATIONS SECTION -->
       <section class="module" id="new-specializations">
         <div class="container">
           <div class="row text-center mb-40">
@@ -129,78 +120,46 @@
             </div>
           </div>
 
-          <!-- Main Category Buttons -->
           <div class="row">
             <div class="col-sm-12 text-center mb-40">
               <div class="specialization-category-buttons">
-                <button class="btn btn-round category-btn active" data-category="surgical">Clinica Chirurgicală</button>
-                <button class="btn btn-round category-btn" data-category="pediatric">Oftalmologie Copii</button>
               </div>
             </div>
           </div>
 
-          <!-- Carousel of Specialization Cards -->
           <div class="specialization-carousel-wrapper">
             <div class="specialization-carousel-container">
-              <!-- Card 1: Cataracta (Surgical) -->
-              <div class="specialization-card" data-specialization="cataracta" data-category="surgical">
-                <div class="card-image-container">
-                  <img src="assets/images/specializations/cataracta.jpg" alt="Cataracta">
-                </div>
-                <h4 class="card-title">Cataracta</h4>
-              </div>
-              <!-- Card 2: Glaucom (Surgical) -->
-              <div class="specialization-card" data-specialization="glaucom" data-category="surgical">
-                <div class="card-image-container">
-                  <img src="assets/images/specializations/glaucom.jpg" alt="Glaucom">
-                </div>
-                <h4 class="card-title">Glaucom</h4>
-              </div>
-              <!-- Card 3: Laser (Surgical) -->
-              <div class="specialization-card" data-specialization="laser" data-category="surgical">
-                <div class="card-image-container">
-                  <img src="assets/images/specializations/laser.jpg" alt="Laser">
-                </div>
-                <h4 class="card-title">Operații Laser</h4>
-              </div>
-              <!-- Card 4: Stellest (Pediatric) -->
-              <div class="specialization-card" data-specialization="stellest" data-category="pediatric">
-                <div class="card-image-container">
-                  <img src="assets/images/specializations/stellest.jpg" alt="Stellest">
-                </div>
-                <h4 class="card-title">Lentile Stellest</h4>
-              </div>
-              <!-- Card 5: PlusoptiX (Pediatric) -->
-              <div class="specialization-card" data-specialization="plusoptix" data-category="pediatric">
-                <div class="card-image-container">
-                  <img src="assets/images/specializations/plusoptix.jpg" alt="PlusoptiX">
-                </div>
-                <h4 class="card-title">PlusoptiX</h4>
-              </div>
-              <!-- Card 6: Ortokeratologie (Pediatric) -->
-              <div class="specialization-card" data-specialization="ortokeratologie" data-category="pediatric">
-                <div class="card-image-container">
-                  <img src="assets/images/specializations/ortokeratologie.jpg" alt="Ortokeratologie">
-                </div>
-                <h4 class="card-title">Ortokeratologie</h4>
-              </div>
             </div>
+ 
             <button class="carousel-nav-btn prev-card"><i class="fa fa-chevron-left"></i></button>
             <button class="carousel-nav-btn next-card"><i class="fa fa-chevron-right"></i></button>
           </div>
 
-          <!-- Specialization Article Content (initially hidden) -->
           <div class="specialization-article-container" style="display: none;">
             <h3 class="article-title text-center"></h3>
             <div class="article-content-wrapper">
               <div class="article-text"></div>
               <div class="article-image"></div>
             </div>
+
+          <div class="article-testimonial" style="display: none;">
+            <div class="testimonial-content-wrapper">
+              <div class="testimonial-author-image">
+                <img src="" alt="Pacient">
+              </div>
+              <div class="testimonial-text-content">
+                <h5 class="testimonial-heading">Citește părerea pacienților noștri:</h5>
+                <a href="#testimoniale" class="testimonial-scroll-link">
+                  <blockquote class="testimonial-quote"></blockquote>
+                </a>
+              </div>
+            </div>
+            <a href="#" class="blog-link" target="_blank">Link către Blog-ul Eurooptik</a>
+          </div>
           </div>
 
         </div>
       </section>
-      <!-- END NEW SPECIALIZATIONS SECTION -->
 
       <section class="module" id="echipa-noastra">
         <div class="container">
@@ -233,213 +192,124 @@
         </div>
     </section>
 
-      <section class="module" id="pricing">
-        <div class="container">
+    <section class="module" id="pricing">
+      <div class="container">
           <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-              <h5 class="module-title">TARIFELE NOASTRE</h5>
-              <div class="module-subtitle">Selectați locația pentru
-                a vedea prețurile consultațiilor disponibile în fiecare
-                clinică.</div>
-            </div>
+              <div class="col-sm-6 col-sm-offset-3">
+                  <h5 class="module-title">TARIFELE NOASTRE</h5>
+                  <div class="module-subtitle">Selectați locația pentru a vedea prețurile consultațiilor disponibile în fiecare clinică.</div>
+              </div>
           </div>
 
           <div class="row">
-            <div class="col-sm-12 text-center mb-40">
-              <div class="location-buttons-container">
-                <button type="button" class="btn btn-border-d btn-round location-btn" id="location-button"
-                  data-location="clinica">Clinica<br> Bacău</button>
-                <button type="button" class="btn btn-border-d btn-round location-btn" id="location-button"
-                  data-location="bacau">Cabinet<br> Bacau</button>
-                <button type="button" class="btn btn-border-d btn-round location-btn" id="location-button"
-                  data-location="comanesti">Cabinet<br> Comănești</button>
-                <button type="button" class="btn btn-border-d btn-round location-btn" id="location-button"
-                  data-location="moinesti">Cabinet<br> Moinești</button>
-                <button type="button" class="btn btn-border-d btn-round location-btn" id="location-button"
-                  data-location="onesti">Cabinet<br> Onesti</button>
-                <button type="button" class="btn btn-border-d btn-round location-btn" id="location-button"
-                  data-location="comanesti">Sterge <br> Selectia</button>
+              <div class="col-sm-12 text-center mb-40">
+                  <div class="location-buttons-container">
+                      <button type="button" class="btn btn-border-d btn-round location-btn" data-location="bacau-clinica">Clinica<br> Bacău</button>
+                      <button type="button" class="btn btn-border-d btn-round location-btn" data-location="bacau">Cabinet<br> Bacau</button>
+                      <button type="button" class="btn btn-border-d btn-round location-btn" data-location="comanesti">Cabinet<br> Comănești</button>
+                      <button type="button" class="btn btn-border-d btn-round location-btn" data-location="moinesti">Cabinet<br> Moinești</button>
+                      <button type="button" class="btn btn-border-d btn-round location-btn" data-location="onesti">Cabinet<br> Onesti</button>
+                      <button type="button" class="btn btn-border-d btn-round location-btn" data-location="clear">Șterge <br> Selecția</button>
+                  </div>
               </div>
-            </div>
           </div>
 
           <div class="row price-row" id="pricing-tables">
-            <div class="pricing-carousel-component">
-              <div class="pricing-carousel-viewport">
-                <div class="pricing-cards-container">
-                  <!-- Card 1: Consultatie Standard -->
-                  <div class="pricing-card">
-                    <div style="border: 2px solid #1e3932; border-radius: 0; overflow: hidden; height: 100%;">
-                      <div
-                        style="background-color: #1e3932; color: #fff; padding: 18px 24px; border-radius: 0; text-align:center; font-size: 2em; font-weight: bold;">
-                        Consultație Standard
-                      </div>
-                      <div style="text-align:center; padding: 12px 0 6px;">
-                        <span style="font-size: 1.75em; color: #1e3932; font-weight: 600;">RON</span>
-                        <span class="price-value" data-bacau="150" data-moinesti="130" data-comanesti="120"
-                          style="font-size:2.2em; font-weight:700; margin-left:8px;">---</span>
-                      </div>
-                      <div style="height: 2px; width: 100%; background: #1e3932; margin: 0 0 14px 0; border-radius:0;">
-                      </div>
-                      <ul
-                        style="list-style: disc inside; margin: 0 0 18px 0; padding-left: 18px; color: #222; font-size: 1.75em;">
-                        <li style="color: black; font-style: normal; text-transform: lowercase;">stabilire dioptrii</li>
-                        <li style="color: black; font-style: normal; text-transform: lowercase;">tensiune oculară</li>
-                        <li style="color: black; font-style: normal; text-transform: lowercase;">fund de ochi</li>
-                        <li style="color: #f5f3ed; font-style: normal; text-transform: lowercase;"></li>
-                        <li style="color: #f5f3ed; font-style: normal; text-transform: lowercase;"></li>
-                      </ul>
+              <div class="pricing-carousel-component">
+                  <div class="pricing-carousel-viewport">
+                      <div class="pricing-cards-container">
+                        <!-- Card 1: Consultatie Standard -->
+                        <div class="pricing-card">
+                            <div class="pricing-card-wrapper">
+                                <div class="pricing-card-header">Consultație Standard</div>
+                                <hr class="pricing-card-divider">
+                                <div class="pricing-card-price-body">
+                                    <span class="price-value" data-consultation-type="standard">- RON</span>
+                                </div>
+                                <hr class="pricing-card-divider">
+                                <ul class="pricing-card-features">
+                                    <li>stabilire dioptrii</li>
+                                    <li>tensiune oculară</li>
+                                    <li>fund de ochi</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Consultatie Complexa -->
+                        <div class="pricing-card">
+                            <div class="pricing-card-wrapper">
+                                <div class="pricing-card-header">Consultație Complexă</div>
+                                <hr class="pricing-card-divider">
+                                <div class="pricing-card-price-body">
+                                    <span class="price-value" data-consultation-type="complexa">- RON</span>
+                                </div>
+                                <hr class="pricing-card-divider">
+                                <ul class="pricing-card-features">
+                                    <li>stabilire dioptrii</li>
+                                    <li>tensiune oculara</li>
+                                    <li>fund de ochi</li>
+                                    <li class="feature-glaucom">glaucom</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Consultatie Premium -->
+                        <div class="pricing-card">
+                            <div class="pricing-card-wrapper">
+                                <div class="pricing-card-header">Consultație Premium</div>
+                                <hr class="pricing-card-divider">
+                                <div class="pricing-card-price-body">
+                                    <span class="price-value" data-consultation-type="premium">- RON</span>
+                                </div>
+                                <hr class="pricing-card-divider">
+                                <ul class="pricing-card-features">
+                                    <li>stabilire dioptrii</li>
+                                    <li>tensiune oculara</li>
+                                    <li>fund de ochi</li>
+                                    <li class="feature-glaucom">glaucom</li>
+                                    <li class="feature-cataracta">cataracta</li>
+                                </ul>
+                            </div>
+                        </div>
+
                     </div>
+                      </div>
                   </div>
 
-                  <!-- Card 2: Consultatie Complexa -->
-                  <div class="pricing-card">
-                    <div style="border: 2px solid #4aa190a2; border-radius: 0; overflow: hidden; height: 100%;">
-                      <div
-                        style="background-color: #16987e; color: #fff; padding: 18px 24px; border-radius: 0; text-align:center; font-size: 2em; font-weight: bold;">
-                        Consultație Complexă
+                  <div class="pricing-nav-container">
+                      <div class="pricing-nav-buttons">
+                          <button type="button" class="btn-circle pricing-prev" aria-label="Previous" disabled>
+                              <i class="fa fa-chevron-left"></i>
+                          </button>
+                          <button type="button" class="btn-circle pricing-next" aria-label="Next">
+                              <i class="fa fa-chevron-right"></i>
+                          </button>
                       </div>
-                      <div style="text-align:center; padding: 12px 0 6px;">
-                        <span style="font-size: 1.75em; color: #1e3932; font-weight: 600;">RON</span>
-                        <span class="price-value" data-bacau="250" data-moinesti="230" data-comanesti="220"
-                          style="font-size:2.2em; font-weight:700; margin-left:8px;">---</span>
-                      </div>
-                      <div
-                        style="height: 2px; width: 100%; background: #16987e; margin: 0 0 14px 0; border-radius:2px;">
-                      </div>
-                      <ul
-                        style="list-style: disc inside; margin: 0 0 18px 0; padding-left: 18px; color: #222; font-size: 1.75em;">
-                        <li style="font-style: normal; text-transform: lowercase;">stabilire dioptrii</li>
-                        <li style="font-style: normal; text-transform: lowercase;">tensiune oculara</li>
-                        <li style="font-style: normal; text-transform: lowercase;">fund de ochi</li>
-                        <li style="color: #16987e; font-style: normal; text-transform: lowercase;">glaucom</li>
-                        <li style="color: #f5f3ed; font-style: normal; text-transform: lowercase;"></li>
-                      </ul>
-                    </div>
                   </div>
-
-                  <!-- Card 3: Consultatie Premium -->
-                  <div class="pricing-card">
-                    <div style="border: 2px solid #d13775c2; overflow: hidden; height: 100%;">
-                      <div
-                        style="background-color: #d13775; color: #fff; padding: 18px 24px; text-align:center; font-size: 2em; font-weight: bold;">
-                        Consultație Premium
-                      </div>
-                      <div style="text-align:center; padding: 12px 24px 6px;">
-                        <span style="font-size: 1.75em; color: #d13775; font-weight: 600;">RON</span>
-                        <span class="price-value" data-bacau="350" data-moinesti="320" data-comanesti="300"
-                          style="font-size:2.2em; font-weight:700; margin-left:8px;">---</span>
-                      </div>
-                      <div style="height: 2px; width: 100%; background: #d13775; margin: 0 0 14px 0;"></div>
-                      <ul
-                        style="list-style: disc inside; margin: 0 0 18px 0; padding-left: 18px; color: #222; font-size: 1.75em; padding-right:24px; padding-left:24px;">
-                        <li style="font-style: normal; text-transform: lowercase;">stabilire dioptrii</li>
-                        <li style="font-style: normal; text-transform: lowercase;">tensiune oculara</li>
-                        <li style="font-style: normal; text-transform: lowercase;">fund de ochi</li>
-                        <li style="color: #16987e; font-style: normal; text-transform: lowercase;">glaucom</li>
-                        <li style="color: #d13775; font-style: normal; text-transform: lowercase;">cataracta</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
               </div>
+          </div>
+      </div>
+    </section>
 
-              <!-- Navigation Buttons for Pricing Cards -->
-              <div style="height: 48px;"></div>
-              <div
-                style="display: flex; justify-content: center; align-items: center; margin: 24px 0 0 0; gap: 24px; width: 100%; padding-top: 24px;">
-                <div style="margin: 0 auto; display: flex; gap: 24px;">
-                  <button type="button" class="btn-circle pricing-prev" aria-label="Previous" disabled>
-                    <i class="fa fa-chevron-left"></i>
-                  </button>
-                  <button type="button" class="btn-circle pricing-next" aria-label="Next">
-                    <i class="fa fa-chevron-right"></i>
-                  </button>
+        <section id="our-services-section">
+            <div id="our-services-container">
+                <h2 class="module-title section-title">SERVICIILE NOASTRE</h2>
+                <p class="module-subtitle section-subtitle"><i>Selectați categoria pentru a vedea serviciile aferente.</i></p>
+
+                <div id="services-filter-container">
                 </div>
-              </div>
             </div>
-          </div>
-          <script>
-            (function () {
-              const container = document.querySelector('.pricing-cards-container');
-              if (!container) return; // Exit if the container doesn't exist
 
-              const cards = container.querySelectorAll('.pricing-card');
-              const prevBtn = document.querySelector('.pricing-prev');
-              const nextBtn = document.querySelector('.pricing-next');
-              const viewport = document.querySelector('.pricing-carousel-viewport');
-
-              let currentIndex = 0;
-              const totalCards = cards.length;
-
-              function updateCarousel() {
-                const offset = -currentIndex * 100;
-                container.style.transform = 'translateX(' + offset + '%)';
-
-                // Update button states
-                prevBtn.disabled = (currentIndex === 0);
-                nextBtn.disabled = (currentIndex >= totalCards - 1);
-              }
-
-              prevBtn.addEventListener('click', () => {
-                if (currentIndex > 0) {
-                  currentIndex--;
-                  updateCarousel();
-                }
-              });
-
-              nextBtn.addEventListener('click', () => {
-                if (currentIndex < totalCards - 1) {
-                  currentIndex++;
-                  updateCarousel();
-                }
-              });
-
-              // Swipe support for mobile
-              let startX = null;
-              viewport.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-              }, { passive: true });
-
-              viewport.addEventListener('touchend', (e) => {
-                if (startX === null) return;
-                let endX = e.changedTouches[0].clientX;
-                let diffX = endX - startX;
-
-                if (diffX > 50) { // Swiped right
-                  prevBtn.click();
-                } else if (diffX < -50) { // Swiped left
-                  nextBtn.click();
-                }
-                startX = null;
-              });
-
-              // Initialize
-              updateCarousel();
-            })();
-          </script>
-        </div>
-      </section>
-
-      <section id="our-services-section">
-          <div id="our-services-container">
-              <h2 class="section-title">SERVICIILE NOASTRE</h2>
-              <p class="section-subtitle"><i>Selectați categoria pentru a vedea serviciile aferente.</i></p>
-
-              <div id="services-filter-container">
-              </div>
-          </div>
-
-          <div id="services-carousel-wrapper">
-              <div id="services-carousel-container">
-                  <div id="services-carousel-slider">
-                  </div>
-                  <button class="carousel-arrow prev" aria-label="Previous slide">❮</button>
-                  <button class="carousel-arrow next" aria-label="Next slide">❯</button>
-              </div>
-              <div id="services-carousel-dots">
-              </div>
-          </div>
+            <div id="services-carousel-wrapper">
+                <div id="services-carousel-container">
+                    <div id="services-carousel-slider">
+                    </div>
+                    <button class="carousel-arrow prev" aria-label="Previous slide">❮</button>
+                    <button class="carousel-arrow next" aria-label="Next slide">❯</button>
+                </div>
+                <div id="services-carousel-dots">
+                </div>
+            </div>
       </section>
 
       <section class="module" id="testimoniale" style="padding: 0;">
@@ -447,8 +317,8 @@
           <div id="testimonial-text-area" class="testimonial-text-area">
             <div class="testimonial-text-inner">
               <div class="module-header text-center text-lg-left">
-                <h2 class="module-title" style="color: #F5F3ED;">TESTIMONIALE</h2>
-                <p class="module-subtitle" style="color: #cccccc;">Ce spun pacienții noștri</p>
+                <h2 class="module-title">TESTIMONIALE</h2>
+                <p class="module-subtitle">Ce spun pacienții noștri</p>
               </div>
               <div id="testimonial-content-wrapper">
               </div>
@@ -462,30 +332,62 @@
         </div>
       </section>
 
-        <section id="adresses" class="module">
-      <div class="container"> <!-- This container now only holds the title and subtitle -->
+    <section id="blog-section">
+        <div id="blog-container">
+            <h2 class="module-title section-title">BLOG - ARTICOLE MEDICALE</h2>
+            <p class="module-subtitle section-subtitle">
+                Selectați categoria pentru a citi articolele medicale scrise de doctorii noștri pentru fiecare dintre specialitățile oferite de clinica noastră.
+            </p>
+
+            <div id="blog-filter-container">
+            </div>
+        </div>
+
+        <div id="blog-carousel-wrapper">
+            <div id="blog-carousel-container">
+                <div id="blog-carousel-slider">
+                </div>
+
+                <button class="carousel-arrow prev" id="blog-prev-arrow">&#10094;</button>
+                <button class="carousel-arrow next" id="blog-next-arrow">&#10095;</button>
+            </div>
+            
+            <div id="blog-carousel-dots">
+            </div>
+        </div>
+
+        <div id="blog-article-display-container" class="hidden">
+            <div class="article-content-wrapper">
+                <h3 id="article-display-title"></h3>
+                <p id="article-display-author"></p>
+                <div id="article-display-content"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="adresses" class="module">
+      <div class="container">
         <div class="row">
           <div class="col-sm-6 col-sm-offset-3">
-            <h2 class="module-title">LOCATIILE NOASTRE</h2>
-            <div class="module-subtitle">Găsește clinica Eurooptik cea mai apropiată de tine.</div>
+            <h2 class="module-title">LOCAȚIILE NOASTRE</h2>
+            <p class="module-subtitle">Găsește clinica Eurooptik cea mai apropiată de tine.</p>
           </div>
         </div>
-      </div> <!-- End of container for title/subtitle -->
+      </div> 
 
-      <!-- These elements are now outside the main container to allow full width -->
       <div class="carousel-viewport">
         <div class="location-cards-container">
 
           <!-- Card 1: Clinica Bacau -->
           <a href="https://g.co/kgs/CF3ZXSp" target="_blank" rel="noopener noreferrer" class="location-card">
             <div class="location-card-header">
-              <h5>Clinica<br>Bacau</h5>
+              <h5>Clinica<br>Bacău</h5>
             </div>
             <div class="location-card-image">
               <img src="assets/images/locations/eurooptik_clinica.png" alt="Clinica Bacau">
             </div>
             <div class="location-card-details">
-              <p class="location-address"><i class="fas fa-map-marker-alt"></i>str. Stefan cel Mare Nr. 7</p>
+              <p class="location-address"><i class="fas fa-map-marker-alt"></i>str. Ștefan cel Mare Nr. 7</p>
               <p class="contact-info"><i class="fa fa-phone"></i>0760 676 303</p>
               <p class="contact-info"><i class="fa fa-envelope"></i>bacau@yahoo.com</p>
             </div>
@@ -494,13 +396,13 @@
           <!-- Card 2: Cabinet Bacau -->
           <a href="https://g.co/kgs/kF5B3ia" target="_blank" rel="noopener noreferrer" class="location-card">
             <div class="location-card-header">
-              <h5>Cabinet<br>Bacau</h5>
+              <h5>Cabinet<br>Bacău</h5>
             </div>
             <div class="location-card-image">
               <img src="assets/images/locations/eurooptik_razboieni.png" alt="Cabinet Bacau">
             </div>
             <div class="location-card-details">
-              <p class="location-address"><i class="fas fa-map-marker-alt"></i>str. Razboieni Nr. 7</p>
+              <p class="location-address"><i class="fas fa-map-marker-alt"></i>str. Războieni Nr. 7</p>
               <p class="contact-info"><i class="fa fa-phone"></i>0760 676 304</p>
               <p class="contact-info"><i class="fa fa-envelope"></i>bacau@yahoo.com</p>
             </div>
@@ -509,7 +411,7 @@
           <!-- Card 3: Cabinet Moinesti -->
           <a href="https://g.co/kgs/5yqERUP" target="_blank" rel="noopener noreferrer" class="location-card">
             <div class="location-card-header">
-              <h5>Cabinet<br>Moinesti</h5>
+              <h5>Cabinet<br>Moinești</h5>
             </div>
             <div class="location-card-image">
               <img src="assets/images/locations/eurooptik_moinesti.png" alt="Cabinet Moinesti">
@@ -524,7 +426,7 @@
           <!-- Card 4: Cabinet Comanesti -->
           <a href="https://g.co/kgs/c5HFjzz" target="_blank" rel="noopener noreferrer" class="location-card">
             <div class="location-card-header">
-              <h5>Cabinet<br>Comanesti</h5>
+              <h5>Cabinet<br>Comănești</h5>
             </div>
             <div class="location-card-image">
               <img src="assets/images/locations/eurooptik_comanesti.png" alt="Cabinet Comanesti">
@@ -539,13 +441,13 @@
           <!-- Card 5: Cabinet Onesti -->
           <a href="https://g.co/kgs/qbvbxa7" target="_blank" rel="noopener noreferrer" class="location-card">
             <div class="location-card-header">
-              <h5>Cabinet<br>Onesti</h5>
+              <h5>Cabinet<br>Onești</h5>
             </div>
             <div class="location-card-image">
               <img src="assets/images/locations/eurooptik_onesti.png" alt="Cabinet Onesti">
             </div>
             <div class="location-card-details">
-              <p class="location-address"><i class="fas fa-map-marker-alt"></i>str. Postei Nr. 6</p>
+              <p class="location-address"><i class="fas fa-map-marker-alt"></i>str. Poștei Nr. 6</p>
               <p class="contact-info"><i class="fa fa-phone"></i>0760 676 306</p>
               <p class="contact-info"><i class="fa fa-envelope"></i>bacau@yahoo.com</p>
             </div>
@@ -554,7 +456,7 @@
         </div>
       </div>
 
-      <div class="container"> <!-- This container now holds only the carousel navigation -->
+      <div class="container"> 
         <div class="carousel-nav">
           <button id="prev-location" class="carousel-btn"><i class="fa fa-chevron-left"></i></button>
           <button id="next-location" class="carousel-btn"><i class="fa fa-chevron-right"></i></button>
@@ -562,25 +464,23 @@
       </div>
     </section>
 
-    <!-- NEW SPONSORS SECTION START -->
     <section id="sponsors" class="module">
       <div class="container">
         <div class="row">
           <div class="col-sm-6 col-sm-offset-3">
-            <h2 class="module-title">PARTENERII NOSTRI</h2>
+            <h2 class="module-title">COMUNITATEA NOASTRĂ</h2>
+            <p class="module-subtitle">Selectați orașul pentru a vedea echipa noastră de profesioniști din fiecare locație.</p>
           </div>
         </div>
       </div>
 
       <div class="carousel-viewport sponsors-carousel-viewport">
         <div class="sponsors-cards-container">
-          <!-- Sponsor Card 1 -->
           <div class="sponsor-card">
             <div class="sponsor-image-wrapper">
               <img src="assets/images/sponsors/blood.png" alt="Blood Sponsor">
             </div>
           </div>
-          <!-- Sponsor Card 2 -->
           <div class="sponsor-card">
             <div class="sponsor-image-wrapper">
               <img src="assets/images/sponsors/luxor.png" alt="Luxor Sponsor">
@@ -589,14 +489,13 @@
         </div>
       </div>
 
-      <div class="container"> <!-- Container for the navigation buttons -->
+      <div class="container"> 
         <div class="carousel-nav sponsors-carousel-nav">
           <button id="prev-sponsor" class="carousel-btn"><i class="fa fa-chevron-left"></i></button>
           <button id="next-sponsor" class="carousel-btn"><i class="fa fa-chevron-right"></i></button>
         </div>
       </div>
     </section>
-    <!-- NEW SPONSORS SECTION END -->
 
     <section id="programare-section" style="display:none; padding:40px 0; background:#f9f9f9;">
       <button onclick="hideProgramareSection()"
@@ -611,25 +510,27 @@
     <hr class="divider-d">
     <footer class="footer">
       <section class="footer-message">
-        <h2>Va mai asteptam la noi!</h2>
-        <button class="footer-appointment-btn">Programeaza-te online</button>
+        <h2>Vă mai așteptăm la noi!</h2>
+        <button class="footer-appointment-btn">Programează-te online</button>
       </section>
       <div class="footer-content">
         <div class="footer-locations">
-          <div class="footer-location"><span class="footer-location-name">Bacau - clinica</span><br>Luni - Vineri, 9 - 17</div>
-          <div class="footer-location"><span class="footer-location-name">Bacau</span><br>Luni - Vineri, 9 - 17</div>
-          <div class="footer-location"><span class="footer-location-name">Moinesti</span><br>Luni - Vineri, 8 - 16</div>
-          <div class="footer-location"><span class="footer-location-name">Comanesti</span><br>Luni - Vineri, 9 - 17</div>
-          <div class="footer-location"><span class="footer-location-name">Onesti</span><br>Luni - Vineri, 9 - 17</div>
+          <div class="footer-location"><span class="footer-location-name">Bacău - clinică</span><br>Luni - Vineri, 9 - 17</div>
+          <div class="footer-location"><span class="footer-location-name">Bacău</span><br>Luni - Vineri, 9 - 17</div>
+          <div class="footer-location"><span class="footer-location-name">Moinești</span><br>Luni - Vineri, 8 - 16</div>
+          <div class="footer-location"><span class="footer-location-name">Comănești</span><br>Luni - Vineri, 9 - 17</div>
+          <div class="footer-location"><span class="footer-location-name">Onești</span><br>Luni - Vineri, 9 - 17</div>
         </div>
         <div class="footer-center">
           <nav class="footer-menu">
-            <a href="#totop">Acasa</a>
-            <a href="#services">Serviciile Noastre</a>
-            <a href="#echipa-noastra">Echipa Noastra</a>
+            <a href="#totop">Acasă</a>
+            <a href="#our-services-section">Serviciile Noastre</a>
+            <a href="#echipa-noastra">Echipa Noastră</a>
             <a href="#pricing">Tarife</a>
             <a href="#testimoniale">Testimoniale</a>
+            <a href="#blog-section">Blog</a>
             <a href="#adresses">Contact</a>
+            <a href="#sponsors">Parteneri</a>
           </nav>
           <div class="footer-logo">
             <img class="footer-logo-image" src="assets/images/logo-small.png" alt="eurooptik logo">
@@ -642,10 +543,7 @@
     <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
   </main>
 
-  <!--  
-    JavaScripts
-    =============================================
-  -->
+
   <script src="assets/lib/jquery/dist/jquery.js"></script>
   <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="assets/lib/wow/dist/wow.js"></script>
@@ -656,16 +554,18 @@
   <script src="assets/lib/smoothscroll.js"></script>
   <script src="assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
   <script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
+  <script src="https://unpkg.com/contentful@latest/dist/contentful.browser.min.js"></script> 
   <script src="assets/js/plugins.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/carousel.js"></script>
+  <script src="assets/js/sponsors.js"></script>
   <script type="module" src="assets/js/team.js"></script>
   <script type="module" src="assets/js/testimonials.js"></script>
   <script type="module" src="assets/js/services.js"></script>
-  <script src="assets/js/new-specializations.js"></script>
+  <script type="module" src="assets/js/pricing.js"></script>
+  <script type="module" src="assets/js/blog.js"></script>
+  <script type="module" src="assets/js/new-specializations.js"></script>
   <script type="module" src="assets/js/config.js"></script>
-  <script src="https://unpkg.com/contentful@latest/dist/contentful.browser.min.js"></script>
-  <script src="assets/js/sponsors.js"></script> <!-- NEW: Link to sponsors JS -->
   <script type="module" src="assets/js/contentful-service.js"></script>
   
   <script>

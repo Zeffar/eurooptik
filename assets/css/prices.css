@@ -1,120 +1,189 @@
-/* assets/css/prices.css */
+#pricing .location-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+#pricing .location-btn {
+    background-color: #cce3de;
+    color: #3f524d; 
+    border: none;
+    border-radius: 50px;
+    padding: 12px 28px;
+    font-weight: 600;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#pricing .location-btn:not(.active):not([data-location="clear"]):hover {
+    background-color: #b8d4cd;
+}
+
+#pricing .location-btn.active {
+    background-color: #4aa190; 
+    color: #fff; 
+    transform: scale(1.05); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+}
+
+#pricing .location-btn[data-location="clear"] {
+    background-color: #f7f7f7;
+    color: #d13775;
+    border: 2px solid #d13775;
+    font-weight: bold;
+}
+#pricing .location-btn[data-location="clear"]:hover {
+    background-color: #d13775;
+    color: #fff;
+}
+
+.pricing-carousel-component {
+    width: 100%;
+}
 
 .pricing-carousel-viewport {
-  width: 100%;
-  max-width: 420px;
-  margin: 0 auto;
-  overflow: hidden;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box; 
 }
 
 .pricing-cards-container {
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-  padding-top: 16px;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 0; 
 }
 
 .pricing-card {
-  flex: 0 0 100%;
-  box-sizing: border-box;
-  padding: 0 10px;
+    flex: 0 0 100%; 
+    width: 100%;   
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
-.btn-circle {
-  background: #d13775;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
-  min-height: 48px;
-  max-width: 48px;
-  max-height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5em;
-  transition: background 0.2s;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 0;
-  aspect-ratio: 1 / 1;
+.pricing-card-wrapper {
+    border: 2px solid #333;
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
-.btn-circle:disabled,
-.btn-circle[disabled] {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.btn-circle:hover,
-.btn-circle:focus {
-  background: #b42c61;
-  color: #fff;
-  outline: none;
-}
-
-.btn-circle .fa {
-  color: #fff;
-}
-
-/* --- Styles for Large Screens --- */
-/* On screens 992px and wider, display all cards and hide navigation */
-@media (min-width: 992px) {
-  .pricing-carousel-viewport {
-    max-width: none; /* Remove the width constraint */
-    overflow: visible; /* Make overflowing cards visible */
-  }
-
-  .pricing-cards-container {
-    justify-content: center; /* Center the cards */
-    gap: 20px; /* Add space between cards */
-    /* Override the transform property from the script to ensure they stay put */
-    transform: none !important;
-  }
-
-  .pricing-card {
-    flex-basis: 33.333%; /* Allow three cards to fit */
-    max-width: 400px; /* Set a max-width for aesthetics */
-  }
-
-  /* Hide the navigation buttons as they are not needed */
-  .pricing-prev,
-  .pricing-next {
-    display: none;
-  }
-}
-
-/* --- CSS For Two-Line Buttons on Large Screens --- */
-
-@media (min-width: 992px) {
-
-  .team-filter-btn,
-  .location-btn {
-    
-    /* 1. Set a NARROW, fixed width to force text wrapping. */
-    /* THIS IS THE VALUE YOU WILL NEED TO ADJUST. */
-    width: 120px; 
-    
-    /* 2. Set a taller, fixed height to ensure all buttons are uniform. */
-    /* Adjust this to make the button taller or shorter. */
-    height: 65px;
-
-    /* 3. Use Flexbox for perfect centering. */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    /* 4. Ensure text inside is centered. */
+.pricing-card-header {
+    background-color: transparent; 
+    color: #000; 
+    padding: 10px 0;
     text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+}
 
-    /* 5. IMPORTANT: Remove or override any 'white-space: nowrap' rule. */
-    white-space: normal; /* This allows text to wrap. */
+.pricing-card-price-body {
+    text-align: center;
+    padding: 15px 0;
+}
 
-    /* 6. Adjust padding as needed, usually less is needed with fixed height. */
-    padding: 5px;
+.price-value {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #333;
+}
+
+.pricing-card-divider {
+    border: 0;
+    height: 2px;
+    width: 100%;
+    background: #333;
+    margin: 5px 0;
+}
+
+.pricing-card-features {
+    list-style: disc inside;
+    margin: 15px 0 0 0;
+    padding-left: 10px;
+    font-size: 1.5em; 
+    flex-grow: 1;
+}
+
+.pricing-card-features li {
+    font-style: normal;
+    text-transform: lowercase;
+    color: black;
+    margin-bottom: 12px;
+}
+
+.feature-glaucom {
+    color: #16987e; 
+    font-weight: 500;
+}
+.feature-cataracta {
+    color: #d13775; 
+    font-weight: 500;
+}
+
+.pricing-nav-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    gap: 24px;
+    width: 100%;
+    padding-top: 24px;
+}
+
+.pricing-nav-buttons {
+    margin: 0 auto;
+    display: flex;
+    gap: 15px; 
+}
+
+.pricing-prev,
+.pricing-next {
+    background-color: transparent;
+    border: 2px solid #333; 
+    color: #333;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px; 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.pricing-prev:hover:not(:disabled),
+.pricing-next:hover:not(:disabled) {
+    background-color: #333;
+    color: #fff;
+}
+
+.pricing-prev:disabled,
+.pricing-next:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+@media (min-width: 992px) {
+    .pricing-cards-container {
+        transform: none !important;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+    .pricing-card {
+        flex: 1; 
+        max-width: 33.333%;
+    }
     
-    /* 7. (Optional) Smoother transition for a polished look. */
-    transition: all 0.2s ease-in-out;
-  }
-
+    .pricing-nav-container {
+        display: none;
+    }
 }

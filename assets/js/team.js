@@ -1,4 +1,4 @@
-import { fetchDataFromContentful } from "./contentful-service.js";
+import { fetchTeamFromContentful } from "./contentful-service.js";
 
 class CustomCarousel {
     constructor(element, options = {}) {
@@ -94,11 +94,12 @@ class CustomCarousel {
     }
 }
 
+
 const teamGrid = document.getElementById('team-grid');
 const filtersContainer = document.getElementById('team-filters-container');
 const viewport = document.getElementById('team-carousel-viewport');
-let doctorCarousel;
-let allDoctors = [];
+let teamCarousel;
+let allTeamMembers = [];
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -107,48 +108,50 @@ function shuffle(array) {
     }
 }
 
-function filterAndDisplayDoctors(filter) {
+function filterAndDisplayTeam(filter) {
     if (!teamGrid) return;
     teamGrid.innerHTML = '';
 
-    const filteredDoctors = filter === 'all' ?
-        allDoctors :
-        allDoctors.filter(doc => doc.categories.includes(filter));
+    const filteredMembers = filter === 'all' ?
+        allTeamMembers :
+        allTeamMembers.filter(member => member.categories.includes(filter));
 
-    shuffle(filteredDoctors);
+    shuffle(filteredMembers);
 
-    if (filteredDoctors.length === 0) {
-        teamGrid.innerHTML = '<p>Niciun medic nu corespunde filtrului selectat.</p>';
+    if (filteredMembers.length === 0) {
+        teamGrid.innerHTML = '<p>Niciun membru al echipei nu corespunde filtrului selectat.</p>';
     } else {
-        filteredDoctors.forEach(doctor => {
-            const doctorCardWrapper = document.createElement('div');
-            doctorCardWrapper.className = 'team-member-wrapper';
-            const specializationsHTML = doctor.specializations.map(spec => `<li>${spec}</li>`).join('');
+        filteredMembers.forEach(member => {
+            const memberCardWrapper = document.createElement('div');
+            memberCardWrapper.className = 'team-member-wrapper';
+            const specializationsHTML = member.specializations.map(spec => `<li>${spec}</li>`).join('');
 
-            doctorCardWrapper.innerHTML = `
-                <div class="team-member">
-                    <div class="team-member-photo" style="background-image: url('${doctor.image}')"></div>
-                    <h4 class="team-member-name">${doctor.name}</h4>
-                    <p class="team-member-role">${doctor.role}</p>
+            const memberTypeClass = member.type || 'default';
+
+            memberCardWrapper.innerHTML = `
+                <div class="team-member ${memberTypeClass}">
+                    <div class="team-member-photo" style="background-image: url('${member.image}')"></div>
+                    <h4 class="team-member-name">${member.name}</h4>
+                    <p class="team-member-role">${member.role}</p>
                     <h5 class="team-member-specialization-title">Specializări</h5>
                     <ul class="team-member-specialization-list">
                         ${specializationsHTML}
                     </ul>
                 </div>
             `;
-            teamGrid.appendChild(doctorCardWrapper);
+            teamGrid.appendChild(memberCardWrapper);
         });
     }
 
-    if (doctorCarousel) {
-        doctorCarousel.update();
+    if (teamCarousel) {
+        teamCarousel.update();
     }
 }
 
 function displayFilterButtons(locations) {
     if (!filtersContainer) return;
 
-    let buttonsHTML = '<button type="button" class="btn-filter active" data-filter="all">Toți medicii</button>';
+    let buttonsHTML = '<button type="button" class="btn-filter active" data-filter="all">Toată echipa</button>';
     locations.forEach(location => {
         buttonsHTML += `<button type="button" class="btn-filter" data-filter="${location.filterId}">${location.name}</button>`;
     });
@@ -162,32 +165,32 @@ function displayFilterButtons(locations) {
         button.classList.add('active');
 
         const filterValue = button.getAttribute('data-filter');
-        filterAndDisplayDoctors(filterValue);
+        filterAndDisplayTeam(filterValue);
     });
 }
 
 async function initializeTeamSection() {
-    const { doctors, locations } = await fetchDataFromContentful();
-    allDoctors = doctors;
+    const { members, locations } = await fetchTeamFromContentful();
+    allTeamMembers = members;
 
     if (!teamGrid || !filtersContainer || !viewport) {
         console.error("One or more required containers for the team section are missing from the DOM.");
         return;
     }
 
-    if (allDoctors.length === 0) {
-        teamGrid.innerHTML = '<p>Ne pare rău, lista de medici nu este disponibilă momentan.</p>';
+    if (allTeamMembers.length === 0) {
+        teamGrid.innerHTML = '<p>Ne pare rău, lista membrilor echipei nu este disponibilă momentan.</p>';
         return;
     }
 
     displayFilterButtons(locations);
 
-    doctorCarousel = new CustomCarousel(viewport, {
+    teamCarousel = new CustomCarousel(viewport, {
         prevBtnSelector: '#prev-doctor',
         nextBtnSelector: '#next-doctor'
     });
 
-    filterAndDisplayDoctors('all');
+    filterAndDisplayTeam('all'); 
 }
 
 initializeTeamSection();
